@@ -1,5 +1,6 @@
 # about worklog foder
-record the meeting
+- record the meeting
+- file name : yy_mm_dd.md
 
 # documentation form
 ---
