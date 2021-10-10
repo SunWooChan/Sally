@@ -1,0 +1,24 @@
+.questionBody {
+  width: 670px;
+  text-align: left;
+}
+.questionBody h3{
+ color: gray;
+ font-size: 20px;
+}
+.questionBody h4{
+  font-size: 30px;
+  padding-bottom: 20px;
+  border-bottom: rgba(220, 220, 220, 0.795) solid 1px;
+}
+.questionBody form {
+  width: 100%;
+  padding-top: 10px;
+}
+.questionBody form input{
+  width: 670px;
+}
+
+
+
+

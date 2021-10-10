@@ -1,0 +1,50 @@
+
+/*************
+*** Header ***
+*************/
+header {
+    width: 100vw;
+    background-color: whitesmoke;
+    position:fixed;
+    /* margin-left: calc(-50vw + 50%); */
+    left: 0;
+}
+header div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    height: 75px;
+    border-bottom: 1px solid #eaeaea 
+}
+
+header div h1 {
+    float: left;
+    margin: 10px
+}
+
+header div nav {
+    float: right;
+    margin-right: 20px;
+}
+
+header div ul li {
+    display:inline-block;
+    padding-right: 15px;
+    
+}
+header div ul li:last-child {
+    margin-right: 0;
+}
+
+header div ul li a {
+    color: #4c4c4c;
+}
+header div h1 img {
+    height: 70px;
+}
+
+
+
+
+
