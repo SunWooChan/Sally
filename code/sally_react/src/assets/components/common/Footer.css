@@ -1,0 +1,51 @@
+/* Default */
+footer {
+    width: 1024px;
+    clear: both;
+}
+
+
+/* footer nav */
+footer nav {
+    display: block;
+    height: 30px;
+    border-bottom: solid grey 1px;
+}
+footer nav ol {
+    display: inline-block;
+}
+#customer_service{
+    float: left;
+}
+#sns_link{
+    float: right;
+}
+footer ol li {
+    display: inline-block;
+    padding : 5px
+}
+
+/* footer body */
+footer .footer_body{
+    clear: both;
+}
+
+footer .footer_body div{
+    display: block;
+}
+footer .address {
+    float: left;
+    text-align: left;    
+}
+
+footer .cs_contact {
+    float: right;
+    text-align: left;
+    width: 40%;
+}
+footer .copyright{
+    border-top: grey solid 1px;
+    clear: both;
+    text-align: left;
+}
+
