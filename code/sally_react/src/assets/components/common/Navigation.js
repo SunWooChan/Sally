@@ -2,7 +2,9 @@ import React from 'react'
 import Logo from './../../images/logo.png'
 import './Navigation.css'
 
-export default function Navigation_bar() {
+import {
+  Link,
+} from "react-router-dom";export default function Navigation_bar() {
     const login = () => {
         return 
     }
@@ -20,7 +22,7 @@ export default function Navigation_bar() {
             <li><a href="#products">추천 제품 보기</a></li>
             <li><a href="#feedback">고객 후기</a></li>
             <li><a href="#">고객센터</a></li>
-            <li><a href="#">로그인</a></li>
+            <li> <Link to = "/login">Login</Link></li>
           </ul>
         </nav>
         </div>
