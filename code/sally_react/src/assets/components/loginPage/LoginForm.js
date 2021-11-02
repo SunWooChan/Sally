@@ -16,6 +16,7 @@ export default function LoginForm() {
     const password = passwordRef.current.value;
     
     // DetailPage로 이동하는 코드를 작성하세요.
+    
     history.push(`/detail?email=${email}&password=${password}`)
   };
 

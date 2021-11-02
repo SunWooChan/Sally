@@ -9,7 +9,7 @@ import {
   useLocation,
   useHistory
 } from "react-router-dom";
-import RegisterForm from "./RegisterForm";
+import RegisterForm from "../registerPage/RegisterForm";
 import LoginForm from './LoginForm'
 import MainPage from "../mainPage/MainPage";
 
@@ -33,6 +33,7 @@ export default function UserLogin() {
         <Route exact path = "/register">
           <RegisterPage />
         </Route>
+        
       </Switch>
     </BrowserRouter>
   );
@@ -41,7 +42,8 @@ export default function UserLogin() {
 // LoginPage 페이지 컴포넌트를 구현하세요.
 function LoginPage() {
   const history = useHistory()
-  
+
+
   const handleSubmit = (formData) =>{
     const foundUser = users.find(user => user.email ===formData.email && user.password ===formData.password)
     //users는 어디서 난겨? ㅋㅋ
@@ -58,6 +60,8 @@ function LoginPage() {
     </div>
   );
 }
+
+
 
 // DetailPage 페이지 컴포넌트를 구현하세요.
 function UserDetailPage() {

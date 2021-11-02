@@ -4,8 +4,8 @@ import Footer from '../common/Footer'
 import ServiceIntro from './ServiceIntro'
 import './MainPage.css'
 import MainContent from './MainContent'
-import Survey from '../survey/Survey'
-import Login from '../common/Login'
+// import Survey from '../surveyPage/Survey'
+// import Login from '../common/Login'
 
 export default function MainPage() {
     return (
@@ -13,7 +13,7 @@ export default function MainPage() {
             <Navigation />
             <MainContent />
             <ServiceIntro />
-            <Survey/>
+            {/* <Survey/> */}
             <Footer />
             {/* <Login></Login> */}
         </div>

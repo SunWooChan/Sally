@@ -14,7 +14,6 @@ import {
         <h1 class="logo">
         <img src = {Logo} alt='logo'/>
         </h1>
-  
         <nav>
           <ul>
             <li><a href="#serviceFunctions">서비스 소개</a></li>
