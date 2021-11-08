@@ -10,6 +10,8 @@ useHistory
 import './App.css';
 import MainPage from './assets/components/mainPage/MainPage';
 import LoginPage from './assets/components/loginPage/LoginPage';
+import RegisterPage from './assets/components/registerPage/RegisterPage';
+
 // import REGI from 
 // import MainPage from './assets/components/pages/MainPage';
 // import UserLogin from './assets/components/Login/UserLogin';
@@ -27,13 +29,15 @@ export default function App() {
           <LoginPage />
         </Route>
 
+        <Route exact path = "/register">
+          <RegisterPage />
+        </Route>
+
         {/* <Route exact path="/detail">
           <UserDetailPage />
         </Route>
 
-        <Route exact path = "/register">
-          <RegisterPage />
-        </Route> */}
+        */}
         
       </Switch>
     </BrowserRouter>
