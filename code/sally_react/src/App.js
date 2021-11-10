@@ -11,9 +11,9 @@ import './App.css';
 import MainPage from './assets/components/mainPage/MainPage';
 import LoginPage from './assets/components/loginPage/LoginPage';
 import RegisterPage from './assets/components/registerPage/RegisterPage';
-
-// import REGI from 
-// import MainPage from './assets/components/pages/MainPage';
+import Survey from './assets/components/surveyPage/Survey'; 
+import NewSurvey from './assets/components/surveyPage/NewSurvey';
+import Result from './assets/components/surveyPage/Result';
 // import UserLogin from './assets/components/Login/UserLogin';
 
 export default function App() {
@@ -32,6 +32,15 @@ export default function App() {
         <Route exact path = "/register">
           <RegisterPage />
         </Route>
+
+        <Route exact path = "/survey">
+          <NewSurvey />
+        </Route>
+
+        <Route exact path = "/result">
+          <Result />
+        </Route>
+
 
         {/* <Route exact path="/detail">
           <UserDetailPage />

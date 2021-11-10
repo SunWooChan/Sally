@@ -1,7 +1,8 @@
-.questionBody {
+/* .questionBody {
   width: 670px;
   text-align: left;
 }
+
 .questionBody h3{
  color: gray;
  font-size: 20px;
@@ -14,11 +15,13 @@
 .questionBody form {
   width: 100%;
   padding-top: 10px;
+  padding-bottom: 50px;
 }
+
 .questionBody form input{
-  width: 670px;
+  line-height : 20px;
 }
 
-
+ */
 
 

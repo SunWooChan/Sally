@@ -108,7 +108,7 @@ app.get("/login", (req, res) => {
 app.post("/login", (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
-
+  
   db.query(
     "SELECT * FROM users WHERE username = ?;",
     username,
@@ -135,6 +135,15 @@ app.post("/login", (req, res) => {
     }
   );
 });
+
+app.post("/survey", (req, res) => {
+  res.send(req.body)
+})
+
+app.get("/survey", (req, res) => {
+  res.send(req.body)
+})
+
 
 const port = 3001
 app.listen(port, () =>

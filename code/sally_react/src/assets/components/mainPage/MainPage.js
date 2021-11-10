@@ -4,7 +4,6 @@ import Footer from '../common/Footer'
 import ServiceIntro from './ServiceIntro'
 import './MainPage.css'
 import MainContent from './MainContent'
-// import Survey from '../surveyPage/Survey'
 
 export default function MainPage() {
     return (
@@ -12,7 +11,6 @@ export default function MainPage() {
             <Navigation />
             <MainContent />
             <ServiceIntro />
-            {/* <Survey/> */}
             <Footer />
         </div>
     )

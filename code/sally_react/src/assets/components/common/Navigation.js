@@ -17,7 +17,7 @@ import {
         <nav>
           <ul>
             <li><a href="#serviceFunctions">서비스 소개</a></li>
-            <li><a href="#survey">건강 분석</a></li>
+            <li><Link to = "/survey">건강 분석</Link></li>
             <li><a href="#products">추천 제품 보기</a></li>
             <li><a href="#feedback">고객 후기</a></li>
             <li><a href="#">고객센터</a></li>
