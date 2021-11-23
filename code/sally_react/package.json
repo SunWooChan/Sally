@@ -9,15 +9,19 @@
     "axios": "^0.22.0",
     "bcrypt": "^5.0.1",
     "body-parse": "^0.1.0",
+    "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express-session": "^1.17.2",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3-rc.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^6.0.1",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "sequelize": "^6.9.0",
+    "sequelize-cli": "^6.3.0",
     "styled-components": "^5.3.3",
     "survey-react": "^1.8.76",
     "web-vitals": "^1.0.1"
@@ -45,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
