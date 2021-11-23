@@ -13,11 +13,12 @@ const cors = require('cors')
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser')
 const session = require("express-session");
+const { default: axios } = require('axios');
 
 const app = express();
 app.use(express.json());
 
-// session 관련1
+// session 관련 1
 app.use(
   cors({
     origin: ["http://localhost:3000"],
@@ -56,14 +57,12 @@ const conn = {  // mysql 접속 설정
   database: 'monolithic'
 };
 // const db = mysql.createConnection(conn)
-//   // {
-//   //   user: "root",
-//   //   host: "localhost",
-//   //   password: "",
-//   //   database: "LoginSystem",
-//   // });
-
-
+  // {
+  //   user: "root",
+  //   host: "localhost",
+  //   password: "",
+  //   database: "LoginSystem",
+  // });
 
 const db = mysql.createConnection({
   user: "root",
@@ -135,11 +134,19 @@ app.post("/login", (req, res) => {
     }
   );
 });
-
+// axios.get('url', ㄱㄷ)
 app.post("/survey", (req, res) => {
+  surveyData = req.body  
+  // for (var key in surveyData) {
+  //   surveyData[key] = `{surveyData[key]}`
+  // }
+  // // surveyData.forEach(element => {
+  //   surveyData[element] = element
+  // });
   res.send(req.body)
 })
 
+axios.get('url')
 app.get("/survey", (req, res) => {
   res.send(req.body)
 })
@@ -149,4 +156,4 @@ const port = 3001
 app.listen(port, () =>
  console.log(`Node.js Server is running on port ${port}...`));
 
-
+ 

@@ -4,6 +4,7 @@ import React from 'react'
 import './Survey.css'
 const handleSubmit = (formData) => {
   axios.post('api/users', formData)
+
 }
 // 응답이 Text 형태인 질문 => 
 //questionInfo = { id, question, type } 가 있어야 한다.
