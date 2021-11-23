@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-GET http://localhost:3001/survey
-
-###
-POST http://localhost:3001/survey
-=======
 GET http://localhost:3000/survey
 
 ###
 POST http://localhost:3000/survey
->>>>>>> d318299b7b6f7de55ec2fb1e56565d6890c1c90d
 Content-Type: application/json 
 
 {
     "qna_sex": "1",
     "qna_age": "26",
-<<<<<<< HEAD
-    "qna_age": "26"
-=======
     "qna_blood": "1",
       "qna_digest": "2,3",
       "qna_skin": "3,4",
@@ -43,5 +33,4 @@ Content-Type: application/json
       "qna_checkup": "2",
       "qna_nutritionalhabit": "1",
       "qna_marketing": "1",
->>>>>>> d318299b7b6f7de55ec2fb1e56565d6890c1c90d
 }
