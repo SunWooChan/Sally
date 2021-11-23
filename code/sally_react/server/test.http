@@ -1,12 +1,36 @@
-GET http://localhost:3001/login 
+GET http://localhost:3000/survey
 
 ###
-
-POST http://localhost:3001/register
-Content-Type: application/json
+POST http://localhost:3000/survey
+Content-Type: application/json 
 
 {
-  "username" : "goddhqj8000",
-  "password" : "password01"
+    "qna_sex": "1",
+    "qna_age": "26",
+    "qna_blood": "1",
+      "qna_digest": "2,3",
+      "qna_skin": "3,4",
+      "qna_eye": "4,5,6",
+      "qna_brain": "1",
+      "qna_stemina": "1",
+      "qna_bone": "2",
+      "qna_immune": "2",
+      "qna_hair": "1",
+      "qna_diet": "3",
+      "qna_stress": "4",
+      "qna_sleep": "1",
+      "qna_symptom": "1",
+      "qna_height": "0",
+      "qna_weight": "2",
+      "qna_workout": "2",
+      "qna_afterworkout": "1",
+      "qna_outdoor": "2",
+      "qna_eathabit": "2",
+      "qna_symbolfood": "3",
+      "qna_etc": "1",
+      "qna_familydisease": "1",
+      "qna_femaledisease": "2",
+      "qna_checkup": "2",
+      "qna_nutritionalhabit": "1",
+      "qna_marketing": "1",
 }
-
