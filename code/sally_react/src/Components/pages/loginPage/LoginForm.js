@@ -6,9 +6,6 @@ export default function LoginForm() {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  // const [inputId,setInputId]  = useState('')
-  // const [inputPw,setInputPw]  = useState('') 이게 Ref.current.value로 email에 담는것과 동일한듯
-
   const submitForm = (e) => {
     e.preventDefault();
 

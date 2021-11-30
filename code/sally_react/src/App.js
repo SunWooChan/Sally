@@ -8,13 +8,13 @@ useLocation,
 useHistory
 } from 'react-router-dom';
 import './App.css';
-import MainPage from './assets/components/mainPage/MainPage';
-import LoginPage from './assets/components/loginPage/LoginPage';
-import RegisterPage from './assets/components/registerPage/RegisterPage';
-// import Survey from './assets/components/surveyPage/Survey'; 
-import NewSurvey from './assets/components/surveyPage/NewSurvey';
-import Result from './assets/components/surveyPage/Result';
-// import UserLogin from './assets/components/Login/UserLogin';
+import React from 'react';
+
+import MainPage from './Components/pages/mainPage/MainPage';
+// import LoginPage from './Components/pages/loginPage/LoginPage';
+import RegisterPage from './Components/pages/registerPage/RegisterPage';
+import NewSurvey from './Components/pages/surveyPage/NewSurvey';
+import Result from './Components/pages/surveyPage/Result';
 
 export default function App() {
   return (
@@ -25,13 +25,13 @@ export default function App() {
           <MainPage />
         </Route>
 
-        <Route exact path="/login">
+        {/* <Route exact path="/login">
           <LoginPage />
-        </Route>
+        </Route> */}
 
-        <Route exact path = "/register">
+        {/* <Route exact path = "/register">
           <RegisterPage />
-        </Route>
+        </Route> */}
 
         <Route exact path = "/survey">
           <NewSurvey />

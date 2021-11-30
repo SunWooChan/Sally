@@ -1,9 +1,8 @@
 import React from 'react'
 import { useLocation } from "react-router-dom";
-
- 
-
- 
+import axios from "axios";
+import { useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 export default function Result() {
   
   const location = useLocation();

@@ -2,7 +2,6 @@
   width: 100vw;
   height: 570px;
   /* width: 500px; */
-  background-image : url('../../images/MainPageBg.jpg');
   margin-left: calc(-50vw + 50%);
   background-size: cover;
 }
@@ -32,6 +31,7 @@
   color: aliceblue;
   border:none;
 }
+
 #Sally button:hover{
   margin-top : 30px;
   width: 140px;

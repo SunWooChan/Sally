@@ -2,13 +2,8 @@
 /*************
 *** Header ***
 *************/
-header {
-    width: 100vw;
-    background-color: whitesmoke;
-    position:fixed;
-    /* margin-left: calc(-50vw + 50%); */
-    left: 0;
-}
+
+
 header div{
     display: flex;
     align-items: center;
@@ -23,24 +18,24 @@ header div h1 {
     margin: 10px
 }
 
-header div nav {
+header  nav {
     float: right;
     margin-right: 20px;
 }
 
-header div ul li {
+header  ul li {
     display:inline-block;
     padding-right: 15px;
     
 }
-header div ul li:last-child {
+header  ul li:last-child {
     margin-right: 0;
 }
 
-header div ul li a {
+header ul li a {
     color: #4c4c4c;
 }
-header div h1 img {
+header h1 img {
     height: 70px;
 }
 
