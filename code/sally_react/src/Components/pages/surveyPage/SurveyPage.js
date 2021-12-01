@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 // Survey.StylesManager.applyTheme("stone");
 
-import "./NSurvey.css";
+import "./SurveyPage.css";
 
 var surveyJSON = {
   locale: "ko",
@@ -465,13 +465,13 @@ var surveyJSON = {
   ],
 };
 
-export default function NewSurvey() {
+export default function SurveyPage() {
   const history = useHistory();
   function SendDataToServer(survey) {
     //send Ajax request to your web server.
     axios.post("http://localhost:3001/survey", survey.data).then((res) => {
       alert(res.data);
-
+    a
       // 페이지 이동하는 내용.
       history.push({
         pathname: "/result",

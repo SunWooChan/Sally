@@ -13,8 +13,8 @@ import React from 'react';
 import MainPage from './Components/pages/mainPage/MainPage';
 // import LoginPage from './Components/pages/loginPage/LoginPage';
 import RegisterPage from './Components/pages/registerPage/RegisterPage';
-import NewSurvey from './Components/pages/surveyPage/NewSurvey';
-import Result from './Components/pages/surveyPage/Result';
+import SurveyPage from './Components/pages/surveyPage/SurveyPage';
+import Result from './Components/pages/resultPage/Result';
 
 export default function App() {
   return (
@@ -34,7 +34,7 @@ export default function App() {
         </Route> */}
 
         <Route exact path = "/survey">
-          <NewSurvey />
+          <SurveyPage />
         </Route>
 
         <Route exact path = "/result">

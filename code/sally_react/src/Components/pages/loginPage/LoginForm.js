@@ -7,7 +7,7 @@ export default function LoginForm() {
   const passwordRef = useRef();
 
   const submitForm = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
     const email = emailRef.current.value;
     const password = passwordRef.current.value;

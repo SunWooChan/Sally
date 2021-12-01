@@ -1,28 +1,20 @@
-* {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    margin: auto;
+@font-face {
+  font-family: '양진체';
+  src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-ol, ul {
-    list-style: none;
-}
-img {
-    vertical-align: middle;
-    border: none;
+#Sally {
+  /* height: 100%; */
+  /* width: 1; */
+  padding-top:  140px; 
+  text-align: center;
 }
 
-a {
-    text-decoration: none;
-}
-
-.container {
-    width: 1024px;
-    /* border: solid #eaeaea 1px; */
-}
-
-.clearfix {
-    clear: both;
+#Sally p{
+  color : green;
+  font-family: '양진체';
+  font-size: 70px;
+  padding:  10px 0;
 }

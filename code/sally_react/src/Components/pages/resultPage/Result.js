@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation } from "react-router-dom";
+ import React from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Redirect } from "react-router-dom";

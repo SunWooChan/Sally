@@ -1,49 +1,70 @@
-import React from 'react'
-import styled from 'styled-components'
-import bgImage from '../../../Assets/images/MainPageBg.png'
-import MainContent from './MainContent'
-import Navigation from '../../common/Navigation'
+import React from "react";
+import styled from "styled-components";
+import bgImage from "../../../Assets/images/MainPageBg.jpg";
+import "./MainPage.css";
+import Navigation from "../../common/Navigation";
+import Footer from "../../common/Footer";
 
-// import './MainPage.css'
+
 // import MainContent from './MainContent'
 // const url = '/Assets/images/MainPageBg.jpg'
 
 const MainContainer = styled.div`
-    display: flex;
-    justify-content : space-between; 
-    align-items : center;
-    margin : auto;
-    height: 90vh;
-    width: 80vw;
-`
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+  width: 100vw;
+  background-image: url(${bgImage});
+  background-size: cover;
+  &+div{
+    margin : 5vw 15vw;
+    height: 100%;
+    width: 100%;
+  }
+`;
+
 const MainPageText = styled.div`
-/* flex-basis: 500px; */
-    height : 100%;
-    width : 30%;
-    background-size : cover;
-`
+  margin : 5vw 15vw;
+  height: 100%;
+  width: 100%;
+`;
 
-const MainPageImg = styled.div`
-    /* flex-basis: 500px; */
-    margin-top:75px;
-    height : 100%;
-    width : 35%;
-
-    background-image: url(${bgImage});
-    background-size : cover;
+const StartBtn = styled.button`
+  margin-top : 30px;
+  width: 140px;
+  height: 60px;
+  border-radius: 40px;
+  background-color: rgb(114, 179, 18);
+  font: 20px bold;
+  color: aliceblue;
+  border:none;
+  &:hover {
+    background-color: green;
+  }
 `
 
 export default function MainPage() {
-    return (
-        <div className = 'mainContainer'>
-            <Navigation />
-            <MainContainer>
-                <MainPageText>
-                    
-                </MainPageText>    
-                <MainPageImg />
-            </MainContainer>
-        </div>
-    )
+  return (
+    <>
+      <Navigation />
+      <MainContainer>
+        <MainPageText>
+          <div id="Sally">
+            <h3></h3>
+            <p>Do Sally!<br/>Salad for Only You</p>
+            <h3>
+              3000 가지 종류의 샐러드에서 찾은 <br />
+              당신만을 위한 샐러드!{" "}
+            </h3>
+            <a href="/survey">
+              <StartBtn>Start Now!</StartBtn>
+            </a>
+          </div>
+        </MainPageText>
+      </MainContainer>
+      
+    </>
+  );
 }
