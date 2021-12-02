@@ -9,12 +9,12 @@ useHistory
 } from 'react-router-dom';
 import './App.css';
 import React from 'react';
-
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from './Components/pages/mainPage/MainPage';
 // import LoginPage from './Components/pages/loginPage/LoginPage';
 import RegisterPage from './Components/pages/registerPage/RegisterPage';
 import SurveyPage from './Components/pages/surveyPage/SurveyPage';
-import Result from './Components/pages/resultPage/Result';
+import ResultPage from './Components/pages/resultPage/ResultPage';
 
 export default function App() {
   return (
@@ -38,7 +38,7 @@ export default function App() {
         </Route>
 
         <Route exact path = "/result">
-          <Result />
+          <ResultPage />
         </Route>
 
 
