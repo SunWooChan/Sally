@@ -62,6 +62,7 @@ export default function ResultPage() {
             <VerticalCard />
             {/* <VerticalCard vege={}/> */}
             <VerticalCard/>
+            <VerticalCard/>
           </VerticalCardsContainer>
         </Cards>
         <TopingSection>
@@ -74,6 +75,10 @@ export default function ResultPage() {
         <Cards>
           <VerticalCardsContainer>
             <h1 style={{margin:"10px"}}>비슷한 식습관, 생활습관을 가진 고객님들에게 추천된 채소</h1>
+            <VerticalCard/>
+            <VerticalCard/>
+            <VerticalCard/>
+
             {/* <VerticalCard vege={}/>
             <VerticalCard vege={}/>
             <VerticalCard vege={}/> */}

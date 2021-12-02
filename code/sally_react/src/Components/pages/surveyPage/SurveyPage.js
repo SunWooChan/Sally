@@ -468,6 +468,9 @@ var surveyJSON = {
   ],
 };
 
+// on page load...
+
+
 export default function SurveyPage() {
   const history = useHistory();
   function SendDataToServer(survey) {
@@ -487,16 +490,10 @@ export default function SurveyPage() {
   }
   return (
     <div id="surveyContainer">
-      <div class="progress">
-        <div
-          class="progress-bar"
-          role="progressbar"
-          aria-valuenow="0"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        ></div>
+      {/* <!-- Change the below data attribute to play --> */}
+      <div class="progress-wrap progress" data-progress-percent="25">
+        <div class="progress-bar progress"></div>
       </div>
-
       <Survey.Survey json={surveyJSON} onComplete={SendDataToServer} />
     </div>
   );
