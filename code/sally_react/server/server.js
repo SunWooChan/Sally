@@ -18,12 +18,7 @@ app.use(cors());
 
 app.post("/survey", async (req, res) => {
   const newSurvey = req.body;
-  //ê·¸ëŸ¼, 
   const qna = await QnA.create(newSurvey);
-<<<<<<< HEAD
-
-=======
->>>>>>> a1d5929277aad44b6ab46ecd1805330014258006
   cmd.run(
     /////////////// python shell script ///////////////
     "/Users/seon-uchan/opt/anaconda3/bin/python /Users/seon-uchan/Desktop/FullStack/kchTest/sally_prac2/res_vege/res_vege3.py",
@@ -36,19 +31,10 @@ app.post("/survey", async (req, res) => {
       }
     }
   );
-<<<<<<< HEAD
-
-
-});
-
-// 3. í–‰ë ¬ê³± í…Œì´ë¸” surprise ì½”ë“œ ëŒì•„ê°€ê²Œ í•˜ê¸°
-
-=======
   res.send(qna);
 });
 
 // 3. Çà·Ä°ö Å×ÀÌºí surprise ÄÚµå µ¹¾Æ°¡°Ô ÇÏ±â
->>>>>>> a1d5929277aad44b6ab46ecd1805330014258006
 
 // 4. surprise ÄÚµå °á°ú ÇÁ·ÐÆ®·Î º¸³»ÁÖ±â
 
