@@ -1,14 +1,13 @@
 const express = require("express");
 const cors = require("cors");
+
+const app = express(); // express °´Ã¼
 var cmd = require("node-cmd");
-
-const app = express(); // express ê°ì²´
-
 const db = require("./models/index");
 const { QnA } = db;
 
-// ë¯¸ë“¤ì›¨ì–´ : ì„œë²„ë¡œì˜¨ ëª¨ë“  reqë¥¼ ì²˜ë¦¬í•œë‹¤.
-app.use(express.json()); // jsonë©”ì˜ë“œëŠ” ì„œë²„ë¡œì˜¨ reqì˜ bodyì— json ë°ì´í„°ê°€ ì¡´ìž¬í•  ê²½ìš° reqì˜ body í”„ë¡œí¼í‹°ë¡œ ì„¤ì •
+// ¹Ìµé¿þ¾î : ¼­¹ö·Î¿Â ¸ðµç req¸¦ Ã³¸®ÇÑ´Ù.
+app.use(express.json()); // json¸Þ½îµå´Â ¼­¹ö·Î¿Â reqÀÇ body¿¡ json µ¥ÀÌÅÍ°¡ Á¸ÀçÇÒ °æ¿ì reqÀÇ body ÇÁ·ÎÆÛÆ¼·Î ¼³Á¤
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "*");
@@ -20,44 +19,26 @@ app.use(cors());
 app.post("/survey", async (req, res) => {
   const newSurvey = req.body;
   const qna = await QnA.create(newSurvey);
-  
   cmd.run(
     /////////////// python shell script ///////////////
     "/Users/seon-uchan/opt/anaconda3/bin/python /Users/seon-uchan/Desktop/FullStack/kchTest/sally_prac2/res_vege/res_vege3.py",
     ///////////////////////////////////////////////////
     function (error, success, stderr) {
       if (error) {
-        console.log("ERROR ï¿½ß»ï¿½ :\n\n", error);
+        console.log("ERROR ¹ß»ý :\n\n", error);
       } else {
         console.log("SUCCESS :\n\n", success);
       }
     }
   );
-
+  res.send(qna);
 });
 
-// 3. í–‰ë ¬ê³± í…Œì´ë¸” surprise ì½”ë“œ ëŒì•„ê°€ê²Œ í•˜ê¸°
-app.post("/survey", async (req, res) => {
-  cmd.run(
-    /////////////// python shell script ///////////////
-    "/Users/seon-uchan/opt/anaconda3/bin/python /Users/seon-uchan/Desktop/FullStack/kchTest/sally_prac2/res_vege/res_vege3.py",
-    ///////////////////////////////////////////////////
-    function (error, success, stderr) {
-      if (error) {
-        console.log("ERROR ï¿½ß»ï¿½ :\n\n", error);
-      } else {
-        console.log("SUCCESS :\n\n", success);
-      }
-    }
-  ); ì´ê±° python ëŒë©´, ê·¸ ê²°ê³¼ë¥¼ json íŒŒì¼ë¡œ ì €ìž¥ ìš”ê±° ê°€ì ¸ì˜¤ëŠ”ê±° 
-  
-  ì—¬ê¸°ì— ê°€ì ¸ì™€ì•¼ í•¨!
-  
-});
+// 3. Çà·Ä°ö Å×ÀÌºí surprise ÄÚµå µ¹¾Æ°¡°Ô ÇÏ±â
 
-// 4. surprise ì½”ë“œ ê²°ê³¼ í”„ë¡ íŠ¸ë¡œ ë³´ë‚´ì£¼ê¸°
+// 4. surprise ÄÚµå °á°ú ÇÁ·ÐÆ®·Î º¸³»ÁÖ±â
 
-// path ,ë²„ì „, mircroservice architecture
+// path ,¹öÀü, mircroservice architecture
 app.listen(3001, () => {
-  console.log("Server is listeningâ€¦");
+  console.log("Server is listening...");
 });
