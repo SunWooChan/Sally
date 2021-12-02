@@ -129,11 +129,13 @@ def matrix_product():
     res_dict = dict((x, y) for x, y in sorted_dict[:4])
     
     ############### json ###################
-    file_path='practice1.json'
+    file_path='matrix_result.json'
     with open(file_path, 'w') as f:
         json.dump(res_dict, f, ensure_ascii=False);
     ########################################
-    return res_dict
+    json_object = json.dumps(res_dict, ensure_ascii=False)
+    print(json_object)
+    return json_object
 
 if __name__=="__main__":
     matrix_product()
