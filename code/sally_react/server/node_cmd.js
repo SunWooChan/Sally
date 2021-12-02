@@ -7,7 +7,7 @@ cmd.run(
   ///////////////////////////////////////////////////
   function (error, success, stderr) {
     if (error) {
-      console.log("ERROR ¹ß»ý :\n\n", error);
+      console.log("ERROR :\n\n", error);
     } else {
       console.log("SUCCESS :\n\n", success);
     }
