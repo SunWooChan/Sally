@@ -68,12 +68,6 @@ module.exports = {
       qna_outdoor: {
         type: Sequelize.STRING,
       },
-      qna_eathabit: {
-        type: Sequelize.STRING,
-      },
-      qna_symbolfood: {
-        type: Sequelize.STRING,
-      },
       qna_etc: {
         type: Sequelize.STRING,
       },
@@ -81,15 +75,6 @@ module.exports = {
         type: Sequelize.STRING,
       },
       qna_femaledisease: {
-        type: Sequelize.STRING,
-      },
-      qna_checkup: {
-        type: Sequelize.STRING,
-      },
-      qna_nutritionalhabit: {
-        type: Sequelize.STRING,
-      },
-      qna_marketing: {
         type: Sequelize.STRING,
       },
       createdAt: {
