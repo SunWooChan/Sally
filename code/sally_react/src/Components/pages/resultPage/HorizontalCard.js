@@ -5,7 +5,7 @@ const Horizontal_Card = styled.div`
   width : 50%;
   height : 15%;
   background-color: salmon;
-  box-shadow : 1px 1px 1px;
+  box-shadow : 1px 1px 1px grey;
   border : 1px solid black;
   border-radius: 20px;
   padding : 10px;
