@@ -35,7 +35,8 @@ export default function App() {
       
         <Route exact path = "/survey">
           <SurveyPage />
-        </Route>     
+        </Route>  
+
         <Route exact path = "/intro">
           <ServiceIntroPage />
         </Route>

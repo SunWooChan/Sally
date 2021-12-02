@@ -7,7 +7,7 @@ import {
 
 import styled from 'styled-components';
 
-const NavigationContainer = styled.header`
+const NavigationContainer = styled.div`
   width : 70vw;
   padding : 0 15% 0 15%;
   /* margin : 0 10vw; // 중앙에 알아서 정렬을 못했음 */
@@ -48,7 +48,7 @@ export default function Navigation_bar() {
             <NavigationMenu><Link to = "/survey">건강 분석</Link></NavigationMenu>
             <NavigationMenu><a href="#products">추천 제품</a></NavigationMenu>
             <NavigationMenu><a href="#">고객센터</a></NavigationMenu>
-            <NavigationMenu><Link to = "/login">Login</Link></NavigationMenu>
+            {/* <NavigationMenu><Link to = "/login">Login</Link></NavigationMenu> */}
         </NavigationMenus>
       </NavigationContainer>
     )

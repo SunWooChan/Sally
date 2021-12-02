@@ -38,7 +38,6 @@ const StartBtn = styled.button`
   border-radius: 40px;
   background-color: rgb(114, 179, 18);
   font: 20px bold;
-
   border:none;
   &:hover {
     background-color: green;
