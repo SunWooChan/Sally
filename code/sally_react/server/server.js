@@ -35,11 +35,6 @@ app.post("/survey", async (req, res) => {
   res.send(resData);
 });
 
-// 3. ��İ� ���̺� surprise �ڵ� ���ư��� �ϱ�
-
-// 4. surprise �ڵ� ��� ����Ʈ�� �����ֱ�
-
-// path ,����, mircroservice architecture
 app.listen(3001, () => {
   console.log("Server is listening...");
 });

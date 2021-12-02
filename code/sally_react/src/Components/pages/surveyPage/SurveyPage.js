@@ -481,7 +481,7 @@ export default function SurveyPage() {
       // 페이지 이동하는 내용.
       history.push({
         pathname: "/result",
-        state: { survey: JSON.stringify(res.data) },
+        state: { result : JSON.stringify(res.data) },
       });
     });
 

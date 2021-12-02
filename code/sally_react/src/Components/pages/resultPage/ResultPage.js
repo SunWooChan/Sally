@@ -40,16 +40,23 @@ const Cards = styled.div`
 export default function ResultPage() {
   const location = useLocation();
 
-  // const data = location.state.data;  
-  
-  // var dataArray = []
+  const json_Data = location.state.data.result;
+      
+  var dataArray = []
 
-  // for (var i in json_data)
-  //   dataArray.push([i, json_data [i]]);
+  for (var i in json_data)
+    dataArray.push([i, json_data [i]]);
   
-  // dataArray.map((e)=>{
-    
-  // })
+  const a = dataArray.map((e)=>{
+      return (
+        <>
+          {e[0]} {e[1]}
+        </>
+      )
+  })
+
+
+
   const path= "../img/시발.jpg"
 
   return (
