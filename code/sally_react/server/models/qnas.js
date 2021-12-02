@@ -37,9 +37,6 @@ module.exports = (sequelize, DataTypes) => {
       qna_etc: DataTypes.STRING,
       qna_familydisease: DataTypes.STRING,
       qna_femaledisease: DataTypes.STRING,
-      qna_checkup: DataTypes.STRING,
-      qna_nutritionalhabit: DataTypes.STRING,
-      qna_marketing: DataTypes.STRING,
     },
     {
       sequelize,
