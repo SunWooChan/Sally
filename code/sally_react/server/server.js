@@ -21,13 +21,13 @@ app.post("/survey", async (req, res) => {
   const qna = await QnA.create(newSurvey);
   cmd.run(
     /////////////// python shell script ///////////////
-    "/Users/seon-uchan/opt/anaconda3/bin/python /Users/seon-uchan/Desktop/FullStack/kchTest/sally_prac2/res_vege/res_vege3.py",
+    "/Users/seon-uchan/opt/anaconda3/bin/python /Users/seon-uchan/Desktop/FullStack/Sally/code/res_vege/res_vege3.py",
     ///////////////////////////////////////////////////
     function (error, success, stderr) {
       if (error) {
         console.log("ERROR ¹ß»ý :\n\n", error);
       } else {
-        console.log("SUCCESS :\n\n", success);
+        console.log(success);
       }
     }
   );
