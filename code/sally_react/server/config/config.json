@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "sally",
-    "password": "sally5770",
+    "username": "root",
+    "password": "igsyhbia1!",
     "database": "Survey",
-    "host": "sally-security-db.cgyhak5wcn11.ap-northeast-2.rds.amazonaws.com",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {

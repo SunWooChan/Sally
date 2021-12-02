@@ -15,7 +15,7 @@ import MainPage from './Components/pages/mainPage/MainPage';
 import RegisterPage from './Components/pages/registerPage/RegisterPage';
 import SurveyPage from './Components/pages/surveyPage/SurveyPage';
 import ResultPage from './Components/pages/resultPage/ResultPage';
-
+import ServiceIntroPage from './Components/pages/serviceIntroPage/ServiceIntroPage';
 export default function App() {
   return (
     <div className="App">
@@ -32,9 +32,12 @@ export default function App() {
         {/* <Route exact path = "/register">
           <RegisterPage />
         </Route> */}
-
+      
         <Route exact path = "/survey">
           <SurveyPage />
+        </Route>     
+        <Route exact path = "/intro">
+          <ServiceIntroPage />
         </Route>
 
         <Route exact path = "/result">

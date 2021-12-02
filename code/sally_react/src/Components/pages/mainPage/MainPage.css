@@ -13,8 +13,8 @@
 }
 
 #Sally p{
-  color : green;
-  font-family: '양진체';
+  color : rgb(54, 255, 47);
+  /* font-family: '양진체'; */
   font-size: 70px;
   padding:  10px 0;
 }

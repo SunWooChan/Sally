@@ -40,15 +40,23 @@ const Cards = styled.div`
 export default function ResultPage() {
   const location = useLocation();
 
-  // const data = location.state.survey;
+  // const data = location.state.data;  
+  
+  // var dataArray = []
+
+  // for (var i in json_data)
+  //   dataArray.push([i, json_data [i]]);
+  
+  // dataArray.map((e)=>{
+    
+  // })
+  const path= "../img/시발.jpg"
 
   return (
     <>
       <Navigation_bar />
       <ContentSection>
-        {/* <ProfileContainer>안녕</ProfileContainer> */}
         <Cards>
-          <h1>야채</h1>
           <VerticalCardsContainer>
             <h1 style={{margin:"10px"}}>건강분석으로 추천된 채소</h1>
             <VerticalCard />
@@ -64,7 +72,6 @@ export default function ResultPage() {
         </TopingSection>
 
         <Cards>
-          <h1>야채</h1>
           <VerticalCardsContainer>
             <h1 style={{margin:"10px"}}>비슷한 식습관, 생활습관을 가진 고객님들에게 추천된 채소</h1>
             {/* <VerticalCard vege={}/>

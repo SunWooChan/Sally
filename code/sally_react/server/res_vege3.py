@@ -6,8 +6,8 @@ import pymysql
 
 host = '127.0.0.1'
 username = 'root'
-database = 'Sally14'
-password = 'swc1560820'
+database = 'survey'
+password = 'igsyhbia1!'
 port = 3306
 
 conn = pymysql.connect(host=host, port=port, user=username, passwd=password, db=database, charset='utf8')
