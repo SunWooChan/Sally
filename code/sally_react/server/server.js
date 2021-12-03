@@ -16,10 +16,14 @@ app.use(function (req, res, next) {
 
 app.use(cors());
 
+Access-Control-Allow-Origin
+y_res.headers["Access-Control-Allow-Origin"] = "*"
+
 app.post("/survey", async (req, res) => {
   const newSurvey = req.body;
   const qna = await QnA.create(newSurvey);
   var resData = ''
+  
   cmd.run(
     /////////////// python shell script ///////////////
     "/Users/seon-uchan/opt/anaconda3/bin/python /Users/seon-uchan/Desktop/FullStack/Sally/code/res_vege/res_vege3.py",

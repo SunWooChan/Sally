@@ -15,9 +15,7 @@ const ContentSection = styled.div`
   margin: auto;
 `;
 const TopingSection = styled.div`
-
 `
-
 const ProfileContainer = styled.div`
   width: 100%;
   border: 1px red solid;
@@ -40,20 +38,20 @@ const Cards = styled.div`
 export default function ResultPage() {
   const location = useLocation();
 
-  const json_Data = location.state.data.result;
+  // const json_Data = location.state.data.result;
       
-  var dataArray = []
+  // var dataArray = []
 
-  for (var i in json_data)
-    dataArray.push([i, json_data [i]]);
+  // for (var i in json_data)
+  //   dataArray.push([i, json_data [i]]);
   
-  const a = dataArray.map((e)=>{
-      return (
-        <>
-          {e[0]} {e[1]}
-        </>
-      )
-  })
+  // const a = dataArray.map((e)=>{
+  //     return (
+  //       <>
+  //         {e[0]} {e[1]}
+  //       </>
+  //     )
+  // })
 
 
 
@@ -73,6 +71,7 @@ export default function ResultPage() {
           </VerticalCardsContainer>
         </Cards>
         <TopingSection>
+          <h1 style={{margin:"10px"}}>샐러드용 토핑</h1>
         <HorizontalCardsContainer>
             <HorizontalCard />
             <HorizontalCard />

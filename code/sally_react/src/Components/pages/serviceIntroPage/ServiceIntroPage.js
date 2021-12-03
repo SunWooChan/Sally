@@ -11,6 +11,7 @@ const ContentSection = styled.div`
   text-align : center;
   letter-spacing : 1px;
 `;
+
 export default function ServiceIntroPage() {
   return (
     <>

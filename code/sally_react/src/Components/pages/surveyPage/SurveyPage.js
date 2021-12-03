@@ -475,16 +475,16 @@ export default function SurveyPage() {
   const history = useHistory();
   function SendDataToServer(survey) {
     //send Ajax request to your web server.
-    axios.post("http://localhost:3001/survey", survey.data).then((res) => {
+    axios.post("http://54.180.38.13/survey", survey.data).then((res) => {
       alert(res.data);
-
+      console.log(res)
       // 페이지 이동하는 내용.
       history.push({
         pathname: "/result",
-        state: { result : JSON.stringify(res.data) },
+        state: { result: JSON.stringify(res.data) },
       });
     });
-
+    
     // res를 그... 분석 결과를 받아야할 듯, 받고 result 페이지로 이동하면서,
     alert(JSON.stringify(survey.data));
   }
