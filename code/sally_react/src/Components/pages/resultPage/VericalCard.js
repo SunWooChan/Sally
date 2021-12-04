@@ -32,24 +32,26 @@ const Vertical_Card = styled.div`
 
 // 엔터 친거는 붙이기. 
 
-export default function VerticalCard({data}) {
-  console.log(data)
-  data=String(data);
-  const dataArray = data.split(',')
-  // const datas = this.props.data
-  // console.log(datas)
-  // // var b = data[0]
-  // // console.log(a);
-  // var arr=[]
-  // // console.log(b);
+export default function VerticalCard({name, hyo, feature, src}) {
+  // feature = String(feature)
+  // console.log(feature);
+  
+  // data= 오이 :효능어쩌고
+  // data["효능"]
+  // var data = JSON.stringify(data)
+  const Nsrc = String(src)
+  console.log(Nsrc)
+  // console.log(typeof(src))
+  
   return (
     <Vertical_Card>
-       <img/>
+      <img src= {`/Assets/img/${Nsrc}`}/>
+       <img src={Nsrc}/>
        <div>
-       <h2>{data.split(',')[0]}</h2>
+       <h2>{name}</h2>
        <ul>
-         <li>효능 : </li> 
-         <li>특성 : {data}</li>
+         <li>효능 : {hyo} </li> 
+         <li>특성 : {feature}</li>
        </ul>
        </div>
     </Vertical_Card>

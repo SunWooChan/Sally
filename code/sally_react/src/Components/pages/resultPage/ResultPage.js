@@ -1,19 +1,23 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-
+import vegeInfo from '../../../Assets/vegeInfo'
 import Navigation_bar from "../../common/Navigation";
 
 import styled from "styled-components";
 import HorizontalCard from "./HorizontalCard";
 import VerticalCard from "./VericalCard";
+// import { or } from "sequelize/types";
 const ContentSection = styled.div`
   padding-top: 75px;
   /* border: 1px solid blue; */
   width: 70%;
   margin: auto;
 `;
+
 const TopingSection = styled.div`
+
 `
+
 const ProfileContainer = styled.div`
   width: 100%;
   /* border: 1px red solid; */
@@ -21,7 +25,6 @@ const ProfileContainer = styled.div`
 const VerticalCardsContainer = styled.div`
   /* border: 1px solid green; */
   width : 100%;
-  
 `
 const HorizontalCardsContainer = styled.div`
   /* border: 1px solid red; */
@@ -35,11 +38,13 @@ const Cards = styled.div`
 
 export default function ResultPage() {
   const location = useLocation();
-
   const json_data = (location.state.result);
-  const dataArr = json_data.split(/{|}|"|,|\s|:/).filter((e)=> e !== ""); // ["a", "b", "c", "d"]
   
+  const dataArr = json_data.split(/{|}|"|,|\s|:/).filter((e)=> e!="").filter((e,i)=>i%2 != 1)  
   console.log(dataArr)
+  
+  console.log(vegeInfo[dataArr[1]]  ["효능"]);
+
 
   return (
     <>
@@ -48,10 +53,10 @@ export default function ResultPage() {
         <Cards>
           <VerticalCardsContainer>
             <h1 style={{margin:"10px"}}>건강분석으로 추천된 채소</h1>
-            <VerticalCard data={[dataArr[0],dataArr[1]]} />
+            <VerticalCard name={dataArr[0]} hyo={vegeInfo[dataArr[0]]["효능"]} src={vegeInfo[dataArr[0]]["사진"]} feature={vegeInfo[dataArr[0]]["야채특성"]} />
             {/* <VerticalCard vege={}/> */}
-            <VerticalCard data={[dataArr[2],dataArr[3]]}/>
-            <VerticalCard data={[dataArr[4],dataArr[5]]}/>
+            <VerticalCard name={dataArr[1]} hyo={vegeInfo[dataArr[1]]["효능"]} src={vegeInfo[dataArr[1]]["사진"]} feature={vegeInfo[dataArr[1]]["야채특성"]}/>
+            <VerticalCard name={dataArr[2]} hyo={vegeInfo[dataArr[2]]["효능"]} src={vegeInfo[dataArr[2]]["사진"]} feature={vegeInfo[dataArr[2]]["야채특성"]}/>
           </VerticalCardsContainer>
         </Cards>
         <TopingSection>
