@@ -23,7 +23,7 @@ survey = pd.DataFrame(result, columns=['id','qna_sex','qna_age','qna_blood','qna
 # survey = pd.read_excel('survey.xlsx',engine='openpyxl', index_col=0) # user id to survey
 ###################################################################################
 
-vege2survey = pd.read_csv('/Users/seon-uchan/Desktop/FullStack/Sally/code/res_vege/vege2survey_remove2.csv',index_col=0) # vege to survey
+vege2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/vege2survey_remove2.csv',index_col=0) # vege to survey
 
 # survey column related to nutrients
 def matrix_product():
