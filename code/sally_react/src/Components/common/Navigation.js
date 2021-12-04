@@ -18,9 +18,10 @@ const NavigationContainer = styled.div`
   justify-content : space-between; 
   align-items:center;
 
+
   z-index: 1;
   height: 75px;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 4px solid pink;
 `
 const NavigationMenus = styled.ul`
   display :flex;
@@ -37,6 +38,7 @@ const NavigationMenu = styled.li`
 
 export default function Navigation_bar() {
     return (
+      
       <NavigationContainer>
         <h1 class="logo">
           <Link to = "/" >
@@ -46,8 +48,8 @@ export default function Navigation_bar() {
         <NavigationMenus>
             <NavigationMenu><a href="/intro">Info</a></NavigationMenu>
             <NavigationMenu><Link to = "/survey">Service</Link></NavigationMenu>
-            <NavigationMenu><a href="#products">About</a></NavigationMenu>
-            <NavigationMenu><a href="#">Contact</a></NavigationMenu>
+            <NavigationMenu><a href="/about">About</a></NavigationMenu>
+            <NavigationMenu><a href="/contact">Contact</a></NavigationMenu>
             {/* <NavigationMenu><Link to = "/login">Login</Link></NavigationMenu> */}
         </NavigationMenus>
       </NavigationContainer>

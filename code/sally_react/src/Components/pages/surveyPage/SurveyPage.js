@@ -2,7 +2,7 @@ import * as Survey from "survey-react";
 import React from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import { Redirect } from "react-router-dom";
+import Navigation_bar from "../../common/Navigation";
 
 import "./SurveyPage.css";
 

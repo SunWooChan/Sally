@@ -2,50 +2,51 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Vertical_Card = styled.div`
-  /* border : 1px solid black; */
   border-radius: 20px;
+  box-shadow : 1px 1px 1px grey;
+
   padding : 10px;
   margin : 10px;
   display:flex;
-  /* 시간 남으면 토글 기능 넣을 것. 아래 화살표 클릭하면, 펼쳐지는 것. 
-  height 만 없애면 될듯
-  */
-  /* text-align:center; */
+  div {
+    padding-left  :10px;
+  }
+  h3 {
+    margin-bottom:10px;
+  }
+
   img{
-    height : 200px;
-    width : 200px;
+    object-fit : cover;
+    border-radius: 50%;
+    height : 150px;
+    width : 150px;
     margin-right : 10px;
+    padding :5px
   }
   ul{
+    background-color : white;
+    border-radius : 20px;
+    padding :5px 0;
     li{
-      color:red;
       list-style: none;
+      font-size : 13px;
+      padding-bottom:10px;
     }
   }
 `
 
-// const data = {
-//   name : "냠냠",
-//   effect : "효능이가 좋다",
-//   feature : "루꼴라는 생김새가 우리나라의 시금치와 함께 톡 쏘는 효과적이며, 루꼴라의 특유의 강한 향은 입맛을 돋궈주어 여름철 식욕 증진에 효과적입니다.​"
-// }
-
-// 엔터 친거는 붙이기. 
-
 export default function VerticalCard(props) {
   const Data = {...props.data}
-  const Name = Data.name;
-  console.log(Name);
-  const Img = require(`../../../Assets/img/루꼴라.jpg`)
+  const Name = String(Data.name);
+  
   return (
     <Vertical_Card>
-      <img src={require(`../../../Assets/img/${Name}.jpg`).default}/>
-       {/* <img src={src}/> */}
+      <img src={require(`../../../Assets/img/${Name}.jpg`).default} />
        <div>
-       <h2>{Data.name}</h2>
+       <h3>{Data.name}</h3>
        <ul>
-          <li>효능 : {Data.efficacy} </li> 
-         <li>특성 : {Data.feature}</li>
+        <li style={{fontSize:"16px"}}>{Data.efficacy} </li>
+        <li> {Data.feature}</li>
        </ul>
        </div>
     </Vertical_Card>

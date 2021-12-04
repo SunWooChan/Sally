@@ -2,22 +2,21 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import vegeInfo from '../../../Assets/vegeInfo'
 import Navigation_bar from "../../common/Navigation";
-
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import HorizontalCard from "./HorizontalCard";
 import VerticalCard from "./VericalCard";
+import Footer from "../../common/Footer";
 
 const ContentSection = styled.div`
   padding-top: 75px;
-  /* border: 1px solid blue; */
-  width: 70%;
+  width: 740px;
   margin: auto;
+  h2 {
+    margin: 20px 0 15px 0;
+    background-color: rgb(202,231,193);
+  }
 `;
-
-const TopingSection = styled.div`
-
-`
-
 const ProfileContainer = styled.div`
   width: 100%;
   /* border: 1px red solid; */
@@ -25,6 +24,7 @@ const ProfileContainer = styled.div`
 const VerticalCardsContainer = styled.div`
   /* border: 1px solid green; */
   width : 100%;
+  /* background-color:  */
 `
 const HorizontalCardsContainer = styled.div`
   /* border: 1px solid red; */
@@ -32,10 +32,24 @@ const HorizontalCardsContainer = styled.div`
   display: flex;
 `;
 
-const Cards = styled.div`
-  width : 100%;
-`
+const RetryBtn = styled.button`
+  /* float: right; */
+  letter-spacing: normal;
+  
+  line-height: 50px;
+  width: 80%;
 
+  
+  margin : 30px 10% 100px 10%;
+  
+  border-radius: 25px;
+  border: white;
+  
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+`
 export default function ResultPage() {
   const location = useLocation();
   const json_data = (location.state.result);
@@ -48,35 +62,23 @@ export default function ResultPage() {
     <>
       <Navigation_bar />
       <ContentSection>
-        <Cards>
-          <VerticalCardsContainer>
-            <h1 style={{margin:"10px"}}>건강분석으로 추천된 채소</h1>
-            <VerticalCard data = {vegeInfo[dataArr[0]]} name={dataArr[0]} hyo={vegeInfo[dataArr[0]]["효능"]} pic={vegeInfo[dataArr[0]]["사진"]} feature={vegeInfo[dataArr[0]]["야채특성"]} />
-            {/* <VerticalCard vege={}/> */}
-            <VerticalCard data = {vegeInfo[dataArr[1]]} name={dataArr[1]} hyo={vegeInfo[dataArr[1]]["효능"]} pic={vegeInfo[dataArr[1]]["사진"]} feature={vegeInfo[dataArr[1]]["야채특성"]}/>
-            <VerticalCard data = {vegeInfo[dataArr[2]]} name={dataArr[2]} hyo={vegeInfo[dataArr[2]]["효능"]} pic={vegeInfo[dataArr[2]]["사진"]} feature={vegeInfo[dataArr[2]]["야채특성"]}/>
-          </VerticalCardsContainer>
-        </Cards>
-        <TopingSection>
-          <h1 style={{margin:"10px"}}>샐러드용 토핑</h1>
+            <h2 style={{  borderRadius:"10px", padding:"10px" }}>건강분석으로 추천된 채소</h2>
+            <VerticalCard data = {vegeInfo[dataArr[0]]} />
+            <VerticalCard data = {vegeInfo[dataArr[1]]} />
+            <VerticalCard data = {vegeInfo[dataArr[2]]} />
+            
+          <h2 style={{ backgroundColor:"lightgrey", borderRadius:"10px", padding:"10px"}}>샐러드용 토핑</h2>
         <HorizontalCardsContainer>
-            <HorizontalCard />
-            <HorizontalCard />
+            <HorizontalCard data = {vegeInfo[dataArr[3]]}/>
+            <HorizontalCard data = {vegeInfo[dataArr[4]]}/>
         </HorizontalCardsContainer>
-        </TopingSection>
-
-        <Cards>
-          <VerticalCardsContainer>
-            <h1 style={{margin:"10px"}}>비슷한 식습관, 생활습관을 가진 고객님들에게 추천된 채소</h1>
-            <VerticalCard/>
-            <VerticalCard/>
-            <VerticalCard/>
-
-  
-          </VerticalCardsContainer>
-        </Cards>
+            <h2 style={{ backgroundColor:"#FEF5B1", borderRadius:"10px", padding:"10px"}}>고객님과 비슷한 생활습관을 가진 고객님들에게 추천된 채소</h2>
+            <VerticalCard data = {vegeInfo[dataArr[5]]}/>
+            <VerticalCard data = {vegeInfo[dataArr[6]]}/>
+            <VerticalCard data = {vegeInfo[dataArr[7]]}/>  
+        <Link to='survey'><RetryBtn>다시 추천 받기</RetryBtn></Link>
+        <Footer/>
       </ContentSection>
-
       {/* 결과입니다. */}
       {/* {data} */}
     </>

@@ -2,11 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Horizontal_Card = styled.div`
-  width : 50%;
+  width : 20%;
   height : 15%;
-  background-color: salmon;
-  box-shadow : 1px 1px 1px grey;
-  border : 1px solid black;
+
+  /* box-shadow : 1px 1px 1px grey; */
   border-radius: 20px;
   padding : 10px;
   margin : 10px;
@@ -14,6 +13,7 @@ const Horizontal_Card = styled.div`
   img{
     height : 150px;
     width : 150px;
+    margin-bottom:10px;
   }
   ul{
     border:1px solid ;
@@ -24,13 +24,14 @@ const Horizontal_Card = styled.div`
   }
 `
 
-export default function HorizontalCard() {
-  
+export default function HorizontalCard(props) {
+  const Data = {...props.data}
+  const Name = String(Data.name);
   
   return (
     <Horizontal_Card>
-       <img/>
-       <h2>토핑 1</h2>
+      <img src={require(`../../../Assets/img_topping/${Name}.jpg`).default} style={{ objectFit:"cover", borderRadius:"50px"}}/>
+       <h3>{Data.name}</h3>
     </Horizontal_Card>
   )
 }

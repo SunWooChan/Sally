@@ -4,7 +4,7 @@ import styled from "styled-components";
 import bgImage from "../../../Assets/images/MainPageBg.jpg";
 import "./MainPage.css";
 import Navigation from "../../common/Navigation";
-import Footer from "../../common/Footer";
+// import Footer from "../../common/Footer";
 
 
 // import MainContent from './MainContent'
@@ -12,6 +12,7 @@ import Footer from "../../common/Footer";
 
 
 const MainContainer = styled.div`
+
   display: flex;
   justify-content: space-between;
   align-items: left;
@@ -43,6 +44,8 @@ const StartBtn = styled.button`
   color : whitesmoke;
   font: 20px bold;
   border:none;
+  font-family : ;
+
   &:hover {
     background-color: green;
   }
@@ -62,7 +65,7 @@ export default function MainPage() {
               당신만을 위한 샐러드!{" "}
             </h3>
             <a href="/survey">
-              <StartBtn>Start Now!</StartBtn>
+              <StartBtn>Start Now !</StartBtn>
             </a>
           </div>
         </MainPageText>
