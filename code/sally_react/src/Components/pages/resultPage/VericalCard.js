@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Vertical_Card = styled.div`
-  border : 1px solid black;
+  /* border : 1px solid black; */
   border-radius: 20px;
   padding : 10px;
   margin : 10px;
@@ -12,8 +12,8 @@ const Vertical_Card = styled.div`
   */
   /* text-align:center; */
   img{
-    height : 150px;
-    width : 150px;
+    height : 200px;
+    width : 200px;
     margin-right : 10px;
   }
   ul{

@@ -8,7 +8,7 @@ import HorizontalCard from "./HorizontalCard";
 import VerticalCard from "./VericalCard";
 const ContentSection = styled.div`
   padding-top: 75px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 70%;
   margin: auto;
 `;
@@ -16,15 +16,15 @@ const TopingSection = styled.div`
 `
 const ProfileContainer = styled.div`
   width: 100%;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 `;
 const VerticalCardsContainer = styled.div`
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width : 100%;
   
 `
 const HorizontalCardsContainer = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width : 100%;
   display: flex;
 `;
@@ -35,7 +35,7 @@ const Cards = styled.div`
 
 export default function ResultPage() {
   const location = useLocation();
-  
+
 
   // const json_Data = location.state.data.result;
       
