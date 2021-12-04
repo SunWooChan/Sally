@@ -1,11 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
-import { useHistory } from "react-router-dom";
-import { Redirect } from "react-router-dom";
+
 import Navigation_bar from "../../common/Navigation";
+
 import styled from "styled-components";
-// import Button from 'react-bootstrap/Button';
 import HorizontalCard from "./HorizontalCard";
 import VerticalCard from "./VericalCard";
 const ContentSection = styled.div`
@@ -37,6 +35,7 @@ const Cards = styled.div`
 
 export default function ResultPage() {
   const location = useLocation();
+  
 
   // const json_Data = location.state.data.result;
       

@@ -1,9 +1,0 @@
-POST 54.180.38.13:3001/server HTTP/2.0
-Content-Type: application/json
-# header name: header value
-
-{
-  "text" : "hi"
-}
-
-
