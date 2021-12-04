@@ -5,12 +5,13 @@ import Navigation_bar from '../../common/Navigation'
 
 const AboutContainer = styled.div`
   padding-top: 75px;
-  border : 1px solid green;
-  width: 740px;
+  /* border : 1px solid green; */
+  width: 70vw;
+  display:flex;
   margin: auto;
   h2 {
-    margin: 20px 0 15px 0;
-    background-color: rgb(202,231,193);
+    margin: 0 0 15px 0;
+    /* background-color: rgb(202,231,193); */
   }
 ` 
 const PersonCard = styled.div`
@@ -18,6 +19,7 @@ const PersonCard = styled.div`
   box-shadow : 1px 1px 1px grey;
   padding : 10px;
   margin : 10px;
+  width : 50%;
   display:flex;
 
 div {
@@ -51,10 +53,39 @@ export default function AboutPage() {
     <div> 
       <Navigation_bar />
       <AboutContainer>
-
-      <h2>김창희</h2>
+      <PersonCard>
+        <img src=""/>
+        <div>
+            <h2>김창희</h2>
+        </div>
+      </PersonCard> 
+      <PersonCard>
+        <img src=""/>
+        <div>
+            <h2>김창희</h2>
+        </div>
+      </PersonCard> 
 
       </AboutContainer>
+      
+      <AboutContainer>
+      <PersonCard>
+        <img src=""/>
+        <div>
+          <ul>
+            <li>김창희</li>
+          </ul>
+        </div>
+      </PersonCard> 
+      <PersonCard>
+        <img src=""/>
+        <div>
+            <h2>김창희</h2>
+          </div>
+      </PersonCard> 
+
+      </AboutContainer>
+      
     </div>
   )
 }
