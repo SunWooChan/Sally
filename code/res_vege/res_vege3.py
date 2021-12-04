@@ -27,7 +27,7 @@ user_survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/survey.csv',index_co
 
 vege2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/vege2survey.csv',index_col=0) # vege to survey
 toping2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/toping2survey.csv',index_col=0) # vege to survey
-user2vege_score = pd.read_csv('./home/ubuntu/Sally/code/res_vege/user2vege_score.csv')
+user2vege_score = pd.read_csv('/home/ubuntu/Sally/code/res_vege/user2vege_score.csv')
 
 def convert_onehot(survey,my_id):
     cor_nutri = ['qna_blood',
