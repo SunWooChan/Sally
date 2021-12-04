@@ -22,7 +22,7 @@ app.post("/survey", async (req, res) => {
 
   cmd.run(
     /////////////// python shell script ///////////////
-    "/Users/seon-uchan/opt/anaconda3/bin/python /Users/seon-uchan/Desktop/FullStack/Sally/code/res_vege/res_vege3.py",
+    "/home/ubuntu/miniconda3/bin/python /home/ubuntu/Sally/code/res_vege/res_vege3.py",
     ///////////////////////////////////////////////////
     function (error, success, stderr) {
       if (error) {
