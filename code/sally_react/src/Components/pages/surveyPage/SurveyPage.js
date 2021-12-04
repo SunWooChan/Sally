@@ -20,7 +20,7 @@ var surveyJSON = {
         {
           type: "radiogroup",
           name: "qna_sex",
-          title: { ko: "당신의 성별은 무엇인가요?" },
+          title: { ko: "고객님의 성별은 무엇인가요?" },
           isRequired: true,
           choices: [
             { value: "1", text: { ko: "남성" } },
@@ -30,11 +30,11 @@ var surveyJSON = {
         {
           type: "text",
           name: "qna_age",
-          title: { ko: "당신의 나이를 적어주세요" },
+          title: { ko: "고객님의 나이를 적어주세요." },
           isRequired: true,
           inputType: "number",
-          min: "0",
-          max: "200",
+          min: "1",
+          max: "120",
         },
       ],
     },
@@ -51,11 +51,10 @@ var surveyJSON = {
             { value: "2", text: { ko: "손끝 또는 발끝이 자주 저려요." } },
             {
               value: "3",
-              text: { ko: "충치가 생기고 잇몸이 자주 붓고 피가 나요." },
+              text: { ko: "충치가 잘 생기고, 잇몸이 자주 붓고, 피가 나요." },
             },
             { value: "0", text: { ko: "선택할 것이 없어요." } },
           ],
-          otherText: { ko: "선택할 것이 없지만 혈관/혈액순환이 걱정돼요." },
         },
       ],
     },
@@ -65,7 +64,7 @@ var surveyJSON = {
         {
           type: "radiogroup",
           name: "qna_digest",
-          title: { ko: "소화/ 장" },
+          title: { ko: "소화 / 장" },
           isRequired: true,
           choices: [
             { value: "1", text: { ko: "복통이나 속 쓰림이 자주 발생해요." } },
@@ -252,13 +251,12 @@ var surveyJSON = {
           title: { ko: "다이어트" },
           isRequired: true,
           choices: [
-            { value: "1", text: { ko: "탄수화물 과다 섭취" } },
-            { value: "2", text: { ko: "빠지지 않는 체지방량" } },
-            { value: "3", text: { ko: "계속되는 허기짐" } },
-            { value: "4", text: { ko: "식사량 감소로 인한 변비" } },
-            { value: "0", text: { ko: "선택할 것이 없어요" } },
+            { value: "1", text: { ko: "탄수화물을 많이 섭취하는 것 같아요." } },
+            { value: "2", text: { ko: "체지방량이 줄지 않는 것 같아요." } },
+            { value: "3", text: { ko: "허기짐이 계속 돼요." } },
+            { value: "4", text: { ko: "식사량 감소로 인한 변비가 있어요." } },
+            { value: "0", text: { ko: "선택할 것이 없어요." } },
           ],
-          otherText: { ko: "선택할 것이 없어요" },
         },
       ],
     },
@@ -271,9 +269,9 @@ var surveyJSON = {
           title: { ko: "스트레스 정도" },
           isRequired: true,
           choices: [
-            { value: "0", text: { ko: "거의 받지 않음" } },
-            { value: "1", text: { ko: "가끔 받음" } },
-            { value: "2", text: { ko: "자주 받음" } },
+            { value: "0", text: { ko: "거의 스트레스를 받지 않아요." } },
+            { value: "1", text: { ko: "가끔 스트레스를 받아요." } },
+            { value: "2", text: { ko: "자주 스트레스를 받아요." } },
           ],
         },
       ],
@@ -284,12 +282,12 @@ var surveyJSON = {
         {
           type: "radiogroup",
           name: "qna_sleep",
-          title: { ko: "수면의 질을 평가해주세요" },
+          title: { ko: "수면의 질" },
           isRequired: true,
           choices: [
-            { value: "0", text: { ko: "잠을 잘 자서 아침에 개운하다" } },
-            { value: "1", text: { ko: "가끔 잠을 설쳐서 피곤하다" } },
-            { value: "2", text: { ko: "숙면을 취하지 못해 자주 피곤하다" } },
+            { value: "0", text: { ko: "잠을 잘 자서 아침에 개운해요." } },
+            { value: "1", text: { ko: "가끔 잠을 설쳐서 피곤해요." } },
+            { value: "2", text: { ko: "숙면을 취하지 못해 자주 피곤해요." } },
           ],
         },
       ],
@@ -313,7 +311,7 @@ var surveyJSON = {
               value: "4",
               text: { ko: "꿀 또는 프로폴리스에 알레르기가 있어요." },
             },
-            { value: "0", text: { ko: "선택할 것이 없어요" } },
+            { value: "0", text: { ko: "선택할 것이 없어요." } },
           ],
         },
       ],
@@ -378,7 +376,7 @@ var surveyJSON = {
         {
           type: "radiogroup",
           name: "question1",
-          title: { ko: "하루야외활동" },
+          title: { ko: "하루 야외 활동" },
           isRequired: true,
           choices: [
             { value: "1", text: { ko: "4시간 이상 야외활동을 해요." } },
@@ -417,7 +415,7 @@ var surveyJSON = {
               text: { ko: "식사량을 줄이는 다이어트를 하고 있어요." },
             },
             { value: "4", text: { ko: "입에 구내염이 자주 생겨요." } },
-            { value: "0", text: { ko: "선택할 것이 없어요" } },
+            { value: "0", text: { ko: "선택할 것이 없어요." } },
           ],
         },
       ],
@@ -442,8 +440,11 @@ var surveyJSON = {
                 ko: "뼈/관절 질환(골다공증, 골감소증 등)을 가지고 있어요.",
               },
             },
-            { value: "4", text: { ko: "당뇨/혈당" } },
-            { value: "0", text: { ko: "저희 가족은 위와 같은 질환이 없어요" } },
+            { value: "4", text: { ko: "당뇨/혈당을 가지고 있어요." } },
+            {
+              value: "0",
+              text: { ko: "저희 가족은 위와 같은 질환이 없어요." },
+            },
           ],
         },
       ],
@@ -457,10 +458,13 @@ var surveyJSON = {
           title: { ko: "여성한정 질환" },
           isRequired: true,
           choices: [
-            { value: "1", text: { ko: "임신/수유중" } },
-            { value: "2", text: { ko: "갱년기" } },
-            { value: "3", text: { ko: "생리 전 증후군이나 유방 통증" } },
-            { value: "0", text: { ko: "선택할 것이 없어요" } },
+            { value: "1", text: { ko: "임신, 수유 중이에요." } },
+            { value: "2", text: { ko: "갱년기 증상이 있어요." } },
+            {
+              value: "3",
+              text: { ko: "생리 전 증후군이나 유방 통증이 심해요." },
+            },
+            { value: "0", text: { ko: "선택할 것이 없어요." } },
           ],
         },
       ],
@@ -470,21 +474,20 @@ var surveyJSON = {
 
 // on page load...
 
-
 export default function SurveyPage() {
   const history = useHistory();
   function SendDataToServer(survey) {
     //send Ajax request to your web server.
-    axios.post("http://54.180.38.13/survey", survey.data).then((res) => {
+    axios.post("/survey", survey.data).then((res) => {
       alert(res.data);
-      console.log(res)
+      console.log(res);
       // 페이지 이동하는 내용.
       history.push({
         pathname: "/result",
         state: { result: JSON.stringify(res.data) },
       });
     });
-    
+
     // res를 그... 분석 결과를 받아야할 듯, 받고 result 페이지로 이동하면서,
     alert(JSON.stringify(survey.data));
   }
