@@ -29,6 +29,7 @@ app.post("/survey", async (req, res) => {
       if (error) {
         console.log("ERROR �߻� :\n\n", error);
       } else {
+        print(resData)
         res.send(resData)
       }
     }
