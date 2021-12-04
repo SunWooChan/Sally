@@ -18,22 +18,15 @@ app.use(cors());
 app.post("/survey", async (req, res) => {
   const newSurvey = req.body;
   const qna = await QnA.create(newSurvey);
-  var resData = "";
-  res.send(resData)
-  // cmd.run(
-  //   /////////////// python shell script ///////////////
-  //   "/Users/seon-uchan/opt/anaconda3/bin/python /Users/seon-uchan/Desktop/FullStack/Sally/code/res_vege/res_vege3.py",
-  //   ///////////////////////////////////////////////////
-  //   function (error, success, stderr) {
-  //     if (error) {
-  //       console.log("ERROR �߻� :\n\n", error);
-  //     } else {
-  //       print(resData)
-  //       res.send(resData)
-  //     }
-  //   }
-  // );
-  // res.send(resData);
+
+  const result = require("child-process").spawn("python", [
+    "../../res_vege/res_vege3.py",
+  ]);
+  
+  result.stdout.on("data", function (data) {
+    console.log(data.toString());
+    res.send(data);
+  });
 });
 
 app.listen(3001, () => {
