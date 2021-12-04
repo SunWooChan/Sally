@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import a from "../../../Assets/images"
+
 const Vertical_Card = styled.div`
   border : 1px solid black;
   border-radius: 20px;

@@ -32,11 +32,11 @@ app.post("/survey", async (req, res) => {
       if (error) {
         console.log("ERROR �߻� :\n\n", error);
       } else {
-        resData = success
+        resData(success)
       }
     }
   );
-  res.send(resData);
+  // res.send(resData);
 });
 
 app.listen(3001, () => {
