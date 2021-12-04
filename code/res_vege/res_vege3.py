@@ -1,7 +1,9 @@
 import pandas as pd
-import sys
-import os
+import numpy as np
 import json
+from surprise import SVD
+from surprise.model_selection import cross_validate
+from sklearn.decomposition import randomized_svd, non_negative_factorization
 import pymysql
 
 host = 'sally-security-db.cgyhak5wcn11.ap-northeast-2.rds.amazonaws.com'
@@ -17,16 +19,14 @@ sql = "SELECT * FROM Qnas";
 # sql = "SELECT * FROM Qnas ORDER BY id DESC LIMIT 1;"
 cursor.execute(sql)
 result = cursor.fetchall()
+front_survey = pd.DataFrame(result, columns=['id','qna_sex','qna_age','qna_blood','qna_digest','qna_skin','qna_eye','qna_brain','qna_stemina','qna_bone','qna_immune','qna_hair','qna_diet','qna_stress','qna_sleep','qna_symptom','qna_height','qna_weight','qna_workout','qna_afterworkout','qna_outdoor','qna_etc','qna_familydisease','qna_femaledisease','createdAt','updatedAt'])
 
-survey = pd.DataFrame(result, columns=['id','qna_sex','qna_age','qna_blood','qna_digest','qna_skin','qna_eye','qna_brain','qna_stemina','qna_bone','qna_immune','qna_hair','qna_diet','qna_stress','qna_sleep','qna_symptom','qna_height','qna_weight','qna_workout','qna_afterworkout','qna_outdoor','qna_etc','qna_familydisease','qna_femaledisease','createdAt','updatedAt'])
-######################## DB ####################################
-# survey = pd.read_excel('survey.xlsx',engine='openpyxl', index_col=0) # user id to survey
-###################################################################################
+user_survey = pd.read_csv('survey_common.csv',index_col=0) # user id to survey
+vege2survey = pd.read_csv('vege2survey_filtering.csv',index_col=0) # vege to survey
+toping2survey = pd.read_csv('toping2survey.csv',index_col=0) # vege to survey
+user2vege_score = pd.read_csv('./user2vege_score.csv')
 
-vege2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/vege2survey_remove2.csv',index_col=0) # vege to survey
-
-# survey column related to nutrients
-def matrix_product():
+def convert_onehot(survey):
     cor_nutri = ['qna_blood',
                 'qna_digest',
                 'qna_skin',
@@ -120,24 +120,96 @@ def matrix_product():
         colname = i + str(dict_survey[i])
         if colname in id_survey.keys():
             id_survey[colname] = 1
-    id_survey = pd.Series(id_survey)
+    return pd.Series(id_survey)
+
+def matrix_product(onehot_survey, data, num):
+    
 
     # matrix mul
-    res = vege2survey.dot(id_survey)
+    reco_matrix = data.dot(onehot_survey)
     # printing descending order
-    sorted_dict = sorted(res.items(), key = lambda item: item[1], reverse = True)
-    res_dict = dict((x, y) for x, y in sorted_dict[:4])
+    sorted_dict = sorted(reco_matrix.items(), key = lambda item: item[1], reverse = True)
+    res_dict = dict((x, minmax(y, list(reco_matrix))) for x, y in sorted_dict[:num])
     
     ############### json ###################
-    file_path='matrix_result.json'
-    with open(file_path, 'w') as f:
-        json.dump(res_dict, f, ensure_ascii=False);
+    # file_path='matrix_result.json'
+    # with open(file_path, 'w') as f:
+    #     json.dump(res_dict, f, ensure_ascii=False);
     ########################################
     json_object = json.dumps(res_dict, ensure_ascii=False)
     print(json_object)
     return json_object
 
+# define cos similarity
+def compute_cos_similarity(v1, v2):
+    norm1 = np.sqrt(np.sum(np.square(v1)))
+    norm2 = np.sqrt(np.sum(np.square(v2)))
+    dot = np.dot(v1, v2)
+    return dot / (norm1 * norm2)
+
+# define minmax
+def minmax(x, l):
+    return round((x - min(l))/(max(l)-min(l))*100, 2)
+
+# find best match id using by SVD
+def reco_svd(user2vege_score, my_id):
+    raw_user2vege_score = np.array(user2vege_score, dtype=float)
+    n_users = int(np.max(raw_user2vege_score[:, 0]))
+    n_veges = int(np.max(raw_user2vege_score[:, 1]))
+    shape = (n_users+1, n_veges+1)
+    shape
+
+    # 인접행렬 생성
+    # 봤으면 rating socre
+    adj_matrix = np.ndarray(shape, dtype=float)
+    for user_id, vege_id, score in raw_user2vege_score:
+        adj_matrix[int(user_id)][int(vege_id)] = score
+    adj_matrix
+
+    U, S, V = randomized_svd(adj_matrix, n_components=6, random_state=0)
+    S = np.diag(S)
+
+    #my_id, my_vector = len(U)-1, U[-1]
+    my_vector = U[my_id]
+    best_match, best_match_id, best_match_vector = -1, -1, []
+
+    for user_id, user_vector in enumerate(U):
+        if my_id != user_id:
+            similarity = compute_cos_similarity(my_vector, user_vector)
+            if similarity > best_match:
+                best_match = similarity
+                best_match_id = user_id
+                best_match_vector = user_vector
+    #print('Best Match: {}, Best Match ID: {}'.format(best_match, best_match_id))
+    return best_match_id
+
+
+def find_reco_svd(best_match_id, reco_matrix):
+    vege_list = ['가지', '고수', '로카', '루꼴라', '배추', '브로콜리', '비트', '로메인', '셀러리', '시금치',
+       '아스파라거스', '양배추', '적양배추', '양상추', '양파', '오이', '청경채', '치커리', '케일', '방울토마토',
+       '파슬리', '파프리카', '피망', '바질']
+    condition = user2vege_score.user_id == best_match_id
+    sorted_svd = user2vege_score[condition].sort_values(by=['score'], ascending=False)
+    reco_dict = {}
+    for vege_id, score in zip(sorted_svd.vege_id, sorted_svd.score):
+      #  if vege_list[vege_id] in reco_matrix:
+      #     print(vege_list[vege_id])
+      #     continue
+       reco_dict[vege_list[vege_id]] = minmax(score, sorted_svd.score)
+       if len(reco_dict) == 3:
+          break
+    json_object = json.dumps(reco_dict, ensure_ascii=False)
+    print(json_object)
+    return json_object
+
 if __name__=="__main__":
-    matrix_product()
-
-
+    onehot_survey = convert_onehot(front_survey)
+    
+    ### reco_matrix = health analysis recommend ###
+    reco_matrix = matrix_product(onehot_survey, vege2survey, 3)
+    ### reco_toping = toping recommend ###
+    reco_toping = matrix_product(onehot_survey, toping2survey, 2)
+    
+    best_match_id = reco_svd(user2vege_score, my_id=1) #user_survey.index[-1])
+    ### reco_svd = vege recommend ### 
+    reco_svd = find_reco_svd(best_match_id, reco_matrix = json.loads(reco_matrix).keys())

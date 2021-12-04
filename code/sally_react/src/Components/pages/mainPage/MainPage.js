@@ -1,3 +1,4 @@
+
 import React from "react";
 import styled from "styled-components";
 import bgImage from "../../../Assets/images/MainPageBg.jpg";
@@ -9,11 +10,13 @@ import Footer from "../../common/Footer";
 // import MainContent from './MainContent'
 // const url = '/Assets/images/MainPageBg.jpg'
 
+
 const MainContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: left;
   margin: auto;
+
   height: 100%;
   width: 100vw;
   background-image: url(${bgImage});
@@ -36,7 +39,8 @@ const StartBtn = styled.button`
   width: 140px;
   height: 60px;
   border-radius: 40px;
-  background-color: rgb(114, 179, 18);
+  background-color: #63BA48;
+  color : whitesmoke;
   font: 20px bold;
   border:none;
   &:hover {
@@ -52,7 +56,7 @@ export default function MainPage() {
         <MainPageText>
           <div id="Sally">
             <h3></h3>
-            <p>Do Sally!<br/>Salad for Only You</p>
+            <p style={{fontSize:"100px"}}>Do Sally !</p><p>Salad for Only You</p>
             <h3>
               3000 가지 종류의 샐러드에서 찾은 <br />
               당신만을 위한 샐러드!{" "}

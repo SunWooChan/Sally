@@ -1,11 +1,6 @@
 
-@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
-.nanumgothic * {
- font-family: 'Nanum Gothic', sans-serif;
-}
-
-
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 /* @font-face {
   font-family: '양진체';
   src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
@@ -21,11 +16,12 @@
 }
 
 #Sally p{
-  color : rgb(107, 163, 73);
+  color : #63BA48;
   /* color : green; */
-  font-family: 'Nanum Gothic';
+  font-family: 'Bangers';
   font-weight: bold;
   /* font-style: bold; */
   font-size: 70px;
+  letter-spacing: 2px;
   padding:  10px 0;
 }

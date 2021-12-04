@@ -39,8 +39,8 @@ export default function Navigation_bar() {
     return (
       <NavigationContainer>
         <h1 class="logo">
-          <Link to = "/">
-          <img src = {Logo} alt='logo' style={{height : "60px"}}/>
+          <Link to = "/" >
+          <img src = {Logo} alt='logo' style={{height : "70px"}}/>
           </Link>
         </h1>
         <NavigationMenus>
