@@ -7,13 +7,16 @@ const AboutContainer = styled.div`
   padding-top: 75px;
   /* border : 1px solid green; */
   width: 70vw;
+` 
+const CardContainer = styled.div`
   display:flex;
   margin: auto;
   h2 {
     margin: 0 0 15px 0;
-    /* background-color: rgb(202,231,193); */
   }
-` 
+
+`
+
 const PersonCard = styled.div`
   border-radius: 20px;
   box-shadow : 1px 1px 1px grey;
