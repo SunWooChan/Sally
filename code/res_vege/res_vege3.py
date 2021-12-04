@@ -21,10 +21,10 @@ cursor.execute(sql)
 result = cursor.fetchall()
 front_survey = pd.DataFrame(result, columns=['id','qna_sex','qna_age','qna_blood','qna_digest','qna_skin','qna_eye','qna_brain','qna_stemina','qna_bone','qna_immune','qna_hair','qna_diet','qna_stress','qna_sleep','qna_symptom','qna_height','qna_weight','qna_workout','qna_afterworkout','qna_outdoor','qna_etc','qna_familydisease','qna_femaledisease','createdAt','updatedAt'])
 
-user_survey = pd.read_csv('survey_common.csv',index_col=0) # user id to survey
-vege2survey = pd.read_csv('vege2survey_filtering.csv',index_col=0) # vege to survey
-toping2survey = pd.read_csv('toping2survey.csv',index_col=0) # vege to survey
-user2vege_score = pd.read_csv('./user2vege_score.csv')
+user_survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/survey_common.csv',index_col=0) # user id to survey
+vege2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/vege2survey_filtering.csv',index_col=0) # vege to survey
+toping2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/toping2survey.csv',index_col=0) # vege to survey
+user2vege_score = pd.read_csv('/home/ubuntu/Sally/code/res_vege/user2vege_score.csv')
 
 def convert_onehot(survey):
     cor_nutri = ['qna_blood',
