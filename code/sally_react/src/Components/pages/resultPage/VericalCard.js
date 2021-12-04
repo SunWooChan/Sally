@@ -33,6 +33,7 @@ const Vertical_Card = styled.div`
 // 엔터 친거는 붙이기. 
 
 export default function VerticalCard({data}) {
+  data=String(data);
   // const datas = this.props.data
   // console.log(datas)
   // // var b = data[0]
@@ -45,8 +46,8 @@ export default function VerticalCard({data}) {
        <div>
        <h2>{data}</h2>
        <ul>
-         <li>효능 : {data}</li> 
-         <li>특성 : {data}</li>
+         <li>효능 : {data.split(',')[0]}</li> 
+         <li>특성 : {data.split(',')[1]}</li>
        </ul>
        </div>
     </Vertical_Card>
