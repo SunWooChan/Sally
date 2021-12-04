@@ -44,10 +44,10 @@ export default function Navigation_bar() {
           </Link>
         </h1>
         <NavigationMenus>
-            <NavigationMenu><a href="/intro">서비스 소개</a></NavigationMenu>
-            <NavigationMenu><Link to = "/survey">건강 분석</Link></NavigationMenu>
-            <NavigationMenu><a href="#products">추천 제품</a></NavigationMenu>
-            <NavigationMenu><a href="#">고객센터</a></NavigationMenu>
+            <NavigationMenu><a href="/intro">Info</a></NavigationMenu>
+            <NavigationMenu><Link to = "/survey">Service</Link></NavigationMenu>
+            <NavigationMenu><a href="#products">About</a></NavigationMenu>
+            <NavigationMenu><a href="#">Contact</a></NavigationMenu>
             {/* <NavigationMenu><Link to = "/login">Login</Link></NavigationMenu> */}
         </NavigationMenus>
       </NavigationContainer>

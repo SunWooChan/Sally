@@ -12,7 +12,7 @@ import Footer from "../../common/Footer";
 const MainContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   margin: auto;
   height: 100%;
   width: 100vw;

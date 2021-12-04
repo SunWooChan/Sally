@@ -36,23 +36,17 @@ const Cards = styled.div`
 export default function ResultPage() {
   const location = useLocation();
 
-
-  // const json_Data = location.state.data.result;
-      
-  // var dataArray = []
-
-  // for (var i in json_data)
-  //   dataArray.push([i, json_data [i]]);
+  const json_data = JSON.parse(location.state.result);
+  // console.log(location.state.data)
+  console.log(location.state.result)
   
-  // const a = dataArray.map((e)=>{
-  //     return (
-  //       <>
-  //         {e[0]} {e[1]}
-  //       </>
-  //     )
-  // })
 
+      
+  var dataArray = []
 
+  for (var i in json_data)
+    dataArray.push([i, json_data[i]]);
+  console.log(dataArray);
 
   const path= "../img/시발.jpg"
 
@@ -63,10 +57,10 @@ export default function ResultPage() {
         <Cards>
           <VerticalCardsContainer>
             <h1 style={{margin:"10px"}}>건강분석으로 추천된 채소</h1>
-            <VerticalCard />
+            <VerticalCard data={dataArray[0]} />
             {/* <VerticalCard vege={}/> */}
-            <VerticalCard/>
-            <VerticalCard/>
+            <VerticalCard data={dataArray[1]}/>
+            <VerticalCard data={dataArray[2]}/>
           </VerticalCardsContainer>
         </Cards>
         <TopingSection>
