@@ -36,19 +36,10 @@ const Cards = styled.div`
 export default function ResultPage() {
   const location = useLocation();
 
-  const json_data = JSON.parse(location.state.result);
-  // console.log(location.state.data)
-  console.log(location.state.result)
+  const json_data = (location.state.result);
+  const dataArr = json_data.split(/{|}|"|,|\s|:/).filter((e)=> e !== ""); // ["a", "b", "c", "d"]
   
-
-      
-  var dataArray = []
-
-  for (var i in json_data)
-    dataArray.push([i, json_data[i]]);
-  console.log(dataArray);
-
-  const path= "../img/시발.jpg"
+  console.log(dataArr)
 
   return (
     <>
@@ -57,10 +48,10 @@ export default function ResultPage() {
         <Cards>
           <VerticalCardsContainer>
             <h1 style={{margin:"10px"}}>건강분석으로 추천된 채소</h1>
-            <VerticalCard data={dataArray[0]} />
+            <VerticalCard data={[dataArr[0],dataArr[1]]} />
             {/* <VerticalCard vege={}/> */}
-            <VerticalCard data={dataArray[1]}/>
-            <VerticalCard data={dataArray[2]}/>
+            <VerticalCard data={[dataArr[2],dataArr[3]]}/>
+            <VerticalCard data={[dataArr[4],dataArr[5]]}/>
           </VerticalCardsContainer>
         </Cards>
         <TopingSection>
@@ -78,9 +69,7 @@ export default function ResultPage() {
             <VerticalCard/>
             <VerticalCard/>
 
-            {/* <VerticalCard vege={}/>
-            <VerticalCard vege={}/>
-            <VerticalCard vege={}/> */}
+  
           </VerticalCardsContainer>
         </Cards>
       </ContentSection>
