@@ -6,7 +6,7 @@ import Navigation_bar from "../../common/Navigation";
 import styled from "styled-components";
 import HorizontalCard from "./HorizontalCard";
 import VerticalCard from "./VericalCard";
-// import { or } from "sequelize/types";
+
 const ContentSection = styled.div`
   padding-top: 75px;
   /* border: 1px solid blue; */
@@ -43,8 +43,8 @@ export default function ResultPage() {
   const dataArr = json_data.split(/{|}|"|,|\s|:/).filter((e)=> e!="").filter((e,i)=>i%2 != 1)  
   console.log(dataArr)
   
-  console.log(vegeInfo[dataArr[1]]  ["효능"]);
-
+  // console.log(vegeInfo[dataArr[1]]  ["효능"]);
+  // dataArr
 
   return (
     <>
@@ -53,7 +53,7 @@ export default function ResultPage() {
         <Cards>
           <VerticalCardsContainer>
             <h1 style={{margin:"10px"}}>건강분석으로 추천된 채소</h1>
-            <VerticalCard name={dataArr[0]} hyo={vegeInfo[dataArr[0]]["효능"]} src={vegeInfo[dataArr[0]]["사진"]} feature={vegeInfo[dataArr[0]]["야채특성"]} />
+            <VerticalCard data = {vegeInfo[dataArr[0]]} name={dataArr[0]} hyo={vegeInfo[dataArr[0]]["효능"]} src={vegeInfo[dataArr[0]]["사진"]} feature={vegeInfo[dataArr[0]]["야채특성"]} />
             {/* <VerticalCard vege={}/> */}
             <VerticalCard name={dataArr[1]} hyo={vegeInfo[dataArr[1]]["효능"]} src={vegeInfo[dataArr[1]]["사진"]} feature={vegeInfo[dataArr[1]]["야채특성"]}/>
             <VerticalCard name={dataArr[2]} hyo={vegeInfo[dataArr[2]]["효능"]} src={vegeInfo[dataArr[2]]["사진"]} feature={vegeInfo[dataArr[2]]["야채특성"]}/>

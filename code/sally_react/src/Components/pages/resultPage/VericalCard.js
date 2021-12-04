@@ -32,21 +32,19 @@ const Vertical_Card = styled.div`
 
 // 엔터 친거는 붙이기. 
 
-export default function VerticalCard({name, hyo, feature, src}) {
-  // feature = String(feature)
-  // console.log(feature);
-  
-  // data= 오이 :효능어쩌고
-  // data["효능"]
-  // var data = JSON.stringify(data)
+export default function VerticalCard({data, name, hyo, feature, src}) {
+  var dataJson = data
+  console.log(name);
+  // console.log(dataJson);
+
   const Nsrc = String(src)
-  console.log(Nsrc)
+  // console.log(Nsrc)
   // console.log(typeof(src))
   
   return (
     <Vertical_Card>
-      <img src= {`/Assets/img/${Nsrc}`}/>
-       <img src={Nsrc}/>
+      {/* <img src={require(`../../../Assets/img/${name}.jpg`)}/> */}
+       <img src={src}/>
        <div>
        <h2>{name}</h2>
        <ul>
