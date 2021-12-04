@@ -18,8 +18,6 @@ app.use(cors());
 app.post("/survey", async (req, res) => {
   const newSurvey = req.body;
   const qna = await QnA.create(newSurvey);
-  var resData = "";
-
   cmd.run(
     /////////////// python shell script ///////////////
     "/home/ubuntu/miniconda3/bin/python /home/ubuntu/Sally/code/res_vege/res_vege3.py",
@@ -28,12 +26,9 @@ app.post("/survey", async (req, res) => {
       if (error) {
         console.log("ERROR �߻� :\n\n", error);
       } else {
-        print(resData)
-        res.send(resData)
+        res.send(success)
       }
-    }
-  );
-  res.send(resData);
+  })
 });
 
 app.listen(3001, () => {
