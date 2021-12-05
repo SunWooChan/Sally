@@ -25,7 +25,7 @@ front_survey = pd.DataFrame(result, columns=['id','qna_sex','qna_age','qna_blood
 
 # user_survey = pd.read_csv('/Users/seon-uchan/Desktop/sally/survey_common.csv',index_col=0) # user id to survey
 
-user_survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/survey.csv',index_col=0) # user id to survey
+# user_survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/survey.csv',index_col=0) # user id to survey
 
 vege2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/vege2survey.csv',index_col=0) # vege to survey
 toping2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/toping2survey.csv',index_col=0) # vege to survey
@@ -226,7 +226,6 @@ if __name__=="__main__":
     # set user
     #user_id = user_survey.index[-1]
     user_id = front_survey.iloc[-1]['id']-1
-    print(user_id)
     # convert to survey's onehot vector
     onehot_survey = convert_onehot(front_survey.iloc[user_id])
 
