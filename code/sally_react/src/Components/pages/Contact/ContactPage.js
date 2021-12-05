@@ -5,43 +5,43 @@ import Navigation_bar from "../../common/Navigation";
 
 const AboutContainer = styled.div`
   padding-top: 50px;
-  /* border : 1px solid green; */
   align-text : center;
 `;
 const CardContainer = styled.div`
-  /* display: flex; */
-  width: 30vw;
+  /* border : 1px solid green; */
+
+/* display: flex; */
+  width: 40vw;
   margin: auto;
   align-contents :center;
   
-  h2 {
-    margin: 0 0 15px 0;
-  }
 `;
 
 const PersonCard = styled.div`
+  /* border : 1px solid green; */
+
   border-radius: 20px;
-  box-shadow: 1px 1px 1px grey;
-  padding: 10px;
   margin: 20px 0;
   width: 100%;
   display: flex;
+  justify-content :center;
 
   div {
+    
     padding-left: 10px;
   }
   h3 {
-    margin-top: 30px 0;
-    /* color:#2b77ab; */
+    margin: 20px 0 10px;
+    color: gray;
   }
   p{
     padding:7px 0;
   }
   img {
     object-fit: cover;
-    border-radius: 50%;
-    height: 130px;
-    width: 130px;
+    border-radius: 20px;
+    /* height: 100%; */
+    width: 80%;
     margin-right: 10px;
     padding: 5px;
   }
@@ -75,7 +75,7 @@ export default function ContactPage() {
               <p style={{ fontWeight :"bold", color :"#2b77ab"}}>경기도 수원시 팔달구 아주로27번길 10-9</p>
             <h3>온라인 본사</h3>
               <p style={{ fontWeight :"bold", color :"#2b77ab"}}>Gather town</p>
-              <img src="../../../Assets/images/gatherTown.png"/>
+              <img src=  {require("../../../Assets/images/gatherTown.png").default}/>
               <h3>문의처</h3>
               <p style={{ fontWeight :"bold", color :"#2b77ab"}}>soon5770@ajou.ac.kr</p>
 

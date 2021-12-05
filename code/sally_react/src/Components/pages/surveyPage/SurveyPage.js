@@ -19,7 +19,7 @@ export default function SurveyPage() {
     //send Ajax request to your web server.
     axios.post("http://ubuntu@54.180.38.13:3001/survey", survey.data).then((res) => {
       console.log(res);
-      console.log(typeof(res.data));
+      // console.log(typeof(res.data));
       
       history.push({
         pathname: "/result",

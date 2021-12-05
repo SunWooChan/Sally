@@ -17,6 +17,8 @@ export default function ServiceIntroPage() {
     <>
       <Navigation_bar />
       <ContentSection>
+      <p style={{ fontFamily:"Bangers", fontSize:"40px", padding :"40px",textAlign:"center"}}>info</p>  
+
         <img src={IntroImg1} style={{width:"70%"}}/>
         <p style={{margin:"auto", padding:"20px 0", width:"70%", fontSize:"20px", lineHeight:"150%"}}>
           Sally는 식품의약품안전처 데이터와 국내 영양학 연구진, 의료진의 진단
