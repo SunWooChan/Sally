@@ -16,6 +16,8 @@ const Vertical_Card = styled.div`
   }
 
   img{
+    min-width:150px;
+
     object-fit : cover;
     border-radius: 50%;
     height : 150px;
