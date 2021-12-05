@@ -40,6 +40,8 @@ const Vertical_Card = styled.div`
 export default function VerticalCard(props) {
   const Data = {...props.data}
   const Name = String(Data.name);
+  console.log(Name);
+  console.log(Data);
   
   return (
     <Vertical_Card>
