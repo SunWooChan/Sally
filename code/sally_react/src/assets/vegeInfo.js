@@ -184,7 +184,6 @@ const vegeInfo = {
     feature: "",
   },
   달걀 : {
-    
     name : "달걀",
     src: "/home/ubuntu/Sally/code/sally_react/src/Assets/img_topping/달걀.jpg",
     efficacy: "",
