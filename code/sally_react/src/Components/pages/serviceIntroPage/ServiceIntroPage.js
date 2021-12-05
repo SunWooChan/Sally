@@ -31,8 +31,6 @@ export default function ServiceIntroPage() {
           엄격한 영양소, 야채 선별 기준과 Sally만의 <br/>분석/추천 알고리즘을 통한 
           샐러드 추천을 받아보세요.
         </p>
-        <Footer style={{ margin :"auto"}}/>
-
       </ContentSection>
     </>
   );
