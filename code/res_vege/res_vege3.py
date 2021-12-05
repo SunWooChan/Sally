@@ -19,17 +19,19 @@ sql = "SELECT * FROM Qnas";
 # sql = "SELECT * FROM Qnas ORDER BY id DESC LIMIT 1;"
 cursor.execute(sql)
 result = cursor.fetchall()
+
+
 front_survey = pd.DataFrame(result, columns=['id','qna_sex','qna_age','qna_blood','qna_digest','qna_skin','qna_eye','qna_brain','qna_stemina','qna_bone','qna_immune','qna_hair','qna_diet','qna_stress','qna_sleep','qna_symptom','qna_height','qna_weight','qna_workout','qna_afterworkout','qna_outdoor','qna_etc','qna_familydisease','qna_femaledisease','createdAt','updatedAt'])
 
 # user_survey = pd.read_csv('/Users/seon-uchan/Desktop/sally/survey_common.csv',index_col=0) # user id to survey
 
-user_survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/survey.csv',index_col=0) # user id to survey
+user_survey = pd.read_csv('survey.csv',index_col=0) # user id to survey
 
-vege2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/vege2survey.csv',index_col=0) # vege to survey
-toping2survey = pd.read_csv('/home/ubuntu/Sally/code/res_vege/toping2survey.csv',index_col=0) # vege to survey
-user2vege_score = pd.read_csv('/home/ubuntu/Sally/code/res_vege/user2vege_score.csv')
+vege2survey = pd.read_csv('vege2survey.csv',index_col=0) # vege to survey
+toping2survey = pd.read_csv('toping2survey.csv',index_col=0) # vege to survey
+user2vege_score = pd.read_csv('user2vege_score.csv')
 
-def convert_onehot(survey,my_id):
+def convert_onehot(survey):
     cor_nutri = ['qna_blood',
                 'qna_digest',
                 'qna_skin',
@@ -115,8 +117,8 @@ def convert_onehot(survey,my_id):
 
     # convert user survey to one hot dict
 
-    dict_survey = dict(survey.iloc[my_id]) # user choose
-    # print(dict_survey)
+    dict_survey = dict(survey) # user choose
+    #print(dict_survey)
     for i in dict_survey.keys():
         if i in noncor_nutri:
             pass
@@ -222,9 +224,10 @@ def update_user2vege_score(user2vege_score, onehot_survey, user_id):
 
 if __name__=="__main__":
     # set user
-    user_id = user_survey.index[-1]
+    #user_id = user_survey.index[-1]
+    user_id = front_survey.iloc[-1]['id']-1
     # convert to survey's onehot vector
-    onehot_survey = convert_onehot(user_survey, user_id)
+    onehot_survey = convert_onehot(front_survey.iloc[user_id])
 
     # USE ONLY WHEN UPDATING NEW USER'S SURVEY
     #user2vege_score = update_user2vege_score(user2vege_score, onehot_survey, user_id)

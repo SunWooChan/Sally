@@ -10,7 +10,7 @@ const AboutContainer = styled.div`
 `;
 const CardContainer = styled.div`
   /* display: flex; */
-  width: 40vw;
+  width: 30vw;
   margin: auto;
   align-contents :center;
   
@@ -23,7 +23,7 @@ const PersonCard = styled.div`
   border-radius: 20px;
   box-shadow: 1px 1px 1px grey;
   padding: 10px;
-  margin: 10px;
+  margin: 20px 0;
   width: 100%;
   display: flex;
 
@@ -32,14 +32,16 @@ const PersonCard = styled.div`
   }
   h3 {
     margin-bottom: 10px;
-    color:#2b77ab;
+    /* color:#2b77ab; */
   }
-
+  p{
+    padding:7px 0;
+  }
   img {
     object-fit: cover;
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
     margin-right: 10px;
     padding: 5px;
   }
@@ -66,46 +68,45 @@ export default function AboutPage() {
       </AboutContainer>
       <AboutContainer>
         <CardContainer>
+          <p style={{ fontFamily:"Bangers", fontSize:"40px", padding :"20px",textAlign:"center"}}>About Us</p>  
         <PersonCard>
           <img src= {require("../../../Assets/personal_photo/선우찬.jpeg").default}/>
             <div>
-              <h2>선우찬</h2>
-              <h3>CEO & Co-Founder<br/>AI Engineer<br/>BackEnd SW Engineer<br/> </h3>
+              <h3>선우찬</h3>
+              <p style={{ fontWeight :"bold", color :"#2b77ab"}}>CEO & Co-Founder<br/>AI Engineer<br/>BackEnd SW Engineer<br/> </p>
               <p>"The best motivation is just doing it"</p>
-
             </div>
           </PersonCard>
         <PersonCard>
           <img src= {require("../../../Assets/personal_photo/안성민.jpeg").default}/>
             <div>
-              <h2>안성민</h2>
-              <h3>CTO & Co-Founder<br/>Data Scientist<br/>AI Engineer<br/> </h3>
-              <p>"  "</p>
-
+              <h3>안성민</h3>
+              <p style={{ fontWeight :"bold", color :"#2b77ab"}}>CTO & Co-Founder<br/>Data Scientist<br/>AI Engineer<br/> </p>
+              <p>"Simple is the best"</p>
             </div>
           </PersonCard>
           <PersonCard>
           <img src= {require("../../../Assets/personal_photo/위지훈.jpeg").default}/>
             <div>
-              <h2>위지훈</h2>
-              <h3>Co-Founder<br/>BackEnd SW Engineer</h3>
-              <p>"어디 여자가"</p>
+              <h3>위지훈</h3>
+              <p style={{ fontWeight :"bold", color :"#2b77ab"}}>Co-Founder<br/>BackEnd SW Engineer</p>
+              <p>"스스로 존경하면 다른 사람도 그대를 존경할 것이다." </p>
             </div>
           </PersonCard>
           <PersonCard>
           <img src= {require("../../../Assets/personal_photo/권민회.jpeg").default}/>
             <div>
-            <h2>권민회</h2>
-              <h3>Co-Founder<br/>Data Scientist</h3>
-              <p>"어디 여자가"</p>
+            <h3>권민회</h3>
+            <p style={{ fontWeight :"bold", color :"#2b77ab"}}>Co-Founder<br/>Data Scientist</p>
+              <p>"Where there is a will, there is a way."</p>
             </div>
           </PersonCard>
           <PersonCard>
-          <img src= {require("../../../Assets/personal_photo/선우찬.jpeg").default}/>
+          <img src= {require("../../../Assets/personal_photo/김창희.jpeg").default}/>
             <div>
-              <h2>김창희</h2>
-              <h3>Co-Founder<br/>FrontEnd SW Engineer</h3>
-              <p>"어디 여자가"</p>
+              <h3>김창희</h3>
+              <p style={{ fontWeight :"bold", color :"#2b77ab"}}>Co-Founder<br/>FrontEnd SW Engineer</p>
+              <p>"인생이 살맛나게 해주는 건 꿈이 현실이 되리라 믿는 것이다."</p>
 
             </div>
           </PersonCard>
