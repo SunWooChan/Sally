@@ -67,7 +67,7 @@ code
 
 - 기본 정보 / 특정 증상 불편 / 공통 증상 불편 / 생활습관 등의 건강문진을 거칩니다.
 
-![](.\readme_img\sally_result.PNG)
+![sally 결과화면](.\readme_img\sally_result.PNG)
 
 - Sally는 세 가지 카테고리를 추천해줍니다.
   - 건강분석 기반의 샐러드 채소 추천
@@ -78,6 +78,6 @@ code
 
 # contributor
 
-![](.\readme_img\member.PNG)
+![sally member](.\readme_img\member.PNG)
 
-![](C:\Users\ja036\Desktop\sally\readme_img\gather.png)
+![sally gather](.\readme_img\gather.png)
