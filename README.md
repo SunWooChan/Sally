@@ -68,7 +68,7 @@ code
 - **Start Now** 버튼 or **Service** 버튼을 클릭하면 건강문진을 시작할 수 있습니다.
 
 <p align="center">
-	<img src="./readme_img/sally_web.PNG" width="50%" height="50%"/>
+	<img src="./readme_img/sally_survey.PNG" width="50%" height="50%"/>
 </p>
 
 - 기본 정보 / 특정 증상 불편 / 공통 증상 불편 / 생활습관 등의 건강문진을 거칩니다.
