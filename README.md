@@ -1,3 +1,7 @@
+<p align="center">
+	<img src="./readme_img/sally.PNG" width="50%" height="50%"/>
+</p>
+
 # Sally directory tree
 
 ```bash
@@ -42,10 +46,6 @@ code
 
 
 # Sally 소개
-
-<p align="center">
-	<img src="./readme_img/sally.PNG" width="50%" height="50%"/>
-</p>
 
 <p align="center">
 	<img src=".\readme_img\sally_info.PNG" width="50%" height="50%"/>
