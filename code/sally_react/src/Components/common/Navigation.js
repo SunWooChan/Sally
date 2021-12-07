@@ -43,7 +43,7 @@ const NavigationMenus = styled.ul`
 
 const NavigationMenu = styled.li`
   list-style-type: none;
-  width: 0px;
+  width: 90px;
   padding-right: 10px;
   color : #4c4c4c;
   @media screen and (max-width :800px){
