@@ -22,8 +22,11 @@ const NavigationContainer = styled.div`
   z-index: 1;
   height: 75px;
   border-bottom: 4px solid pink;
+
   @media screen and (max-width :800px){
+    width : 100vw;
     height: 60px;    
+    padding:0 0;
 }
 
 `
@@ -31,31 +34,43 @@ const NavigationMenus = styled.ul`
   display :flex;
   justify-content: space-evenly;
   align-items:center;
+  
+  @media screen and (max-width :800px){
+    width: 100vw;
+  }
+
 `
 
 const NavigationMenu = styled.li`
   list-style-type: none;
-  width: 90px;
-  padding-left: 15px;
+  width: 0px;
+  padding-right: 10px;
   color : #4c4c4c;
   @media screen and (max-width :800px){
-    width: 20%;
-    padding-left:20px;
-}
+    width: 20px;
+    /* padding :5px 0; */
+    font-size : 80%;
+  }
 `
 
 const NavLogo = styled.h1`
-  @media screen and (max-width :800px){
-    display:none;
-}
+
+  img{
+    height : 70px;
+
+  @media screen and (max-width :800px){  
+    height:50px;
+    max-height:50px;
+    z-index : 1;
+  }
+  }
 `
 export default function Navigation_bar() {
     return (
-      
       <NavigationContainer>
         <NavLogo class="logo" >
           <Link to = "/" >
-          <img src = {Logo} alt='logo' style={{ height : "70px"}}/>
+          <img src = {Logo} alt='logo' />
           </Link>
         </NavLogo>
         <NavigationMenus>

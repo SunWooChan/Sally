@@ -10,10 +10,21 @@ const Horizontal_Card = styled.div`
   padding : 10px;
   margin : 10px;
   text-align:center;
+  @media screen and (max-width :800px){
+      /* height : 150px; */
+      width: 50%;
+      padding : 0px;
+
+  }
   img{
+
     height : 150px;
     width : 150px;
     margin-bottom:10px;
+    @media screen and (max-width :800px){
+      height : 150px;
+      width : 100%; 
+    }
   }
   ul{
     border:1px solid ;

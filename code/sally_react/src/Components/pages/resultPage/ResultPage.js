@@ -16,6 +16,9 @@ const ContentSection = styled.div`
     margin: 20px 0 15px 0;
     background-color: rgb(202,231,193);
   }
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 const ProfileContainer = styled.div`
   width: 100%;
@@ -49,6 +52,7 @@ const RetryBtn = styled.button`
   color: white;
   font-size: 16px;
   font-weight: 700;
+  
 `
 export default function ResultPage() {
   const location = useLocation();

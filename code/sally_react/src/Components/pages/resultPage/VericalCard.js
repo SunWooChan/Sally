@@ -8,6 +8,11 @@ const Vertical_Card = styled.div`
   padding : 10px;
   margin : 10px;
   display:flex;
+  @media only screen and (max-width: 800px) {
+    display: block;
+    
+    text-align:center;
+  }
   div {
     padding-left  :10px;
   }
