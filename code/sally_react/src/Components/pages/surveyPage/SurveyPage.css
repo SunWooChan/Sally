@@ -15,9 +15,10 @@
   margin :7px;
 }
 
+
+
 .sv_container {
   height: 100%;
-
 }
 .sv_main {
   margin: auto;
@@ -130,4 +131,107 @@ button {
   color: white;
   font-size: 16px;
   font-weight: 700;
+}
+
+
+
+@media screen and (max-width :800px){
+  #surveyContainer {
+    border: none;
+    margin: 0 auto;
+    width : 90vw;
+    text-align: left;
+    /* height: 400px; */
+    margin: 0 auto;
+    padding: 70px 0;
+  }
+  .sv_main {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  
+.sv_body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sv_main > form {
+  height: 100%;
+}
+
+.sv_page_title {
+  font-size: 100%;
+  height: 58px;
+  padding: 10px 0 0 0;
+  margin-bottom: 10px;
+  /* border-bottom: 2px solid green; */
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+} 
+
+.sv_p_root {
+  margin-bottom: 30px;
+}
+.sv_q_required_text {
+  display: none;
+}
+.sv_prev_btn {
+  float: left;
+  letter-spacing: normal;
+  
+  line-height: 50px;
+  width: 30%;
+
+  border-radius: 25px;
+  border: lightgray solid 1px;
+  
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+.sv_q_erbox {
+  color:red;
+} 
+.sv_next_btn {
+  float: right;
+  letter-spacing: normal;
+  
+  /* line-height: 50px; */
+  width: 60%;
+
+  border-radius: 25px;
+  border: white;
+  
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+.sv_nav {
+  bottom: 0px;
+}
+
+.sv_complete_btn {
+  float: right;
+  letter-spacing: normal;
+  
+  line-height: 50px;
+  width: 60%;
+
+  border-radius: 25px;
+  border: white;
+  
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+  
 }

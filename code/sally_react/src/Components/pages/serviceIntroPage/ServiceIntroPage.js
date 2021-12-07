@@ -3,20 +3,34 @@ import styled from "styled-components";
 import IntroImg1 from "../../../Assets/images/Intro1.jpg";
 import IntroImg2 from "../../../Assets/images/Intro2.png";
 import Navigation_bar from "../../common/Navigation";
-import Footer from "../../common/Footer";
+
 const ContentSection = styled.div`
   padding-top: 75px;
   width: 70%;
   margin: auto;
   text-align : center;
   letter-spacing : 1px;
+  
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    font-size:20px;
+  }
+  p {
+      padding : 0px;
+      @media only screen and (max-width: 800px) {
+        padding : 0px;
+
+
+      }}
 `;
 
 export default function ServiceIntroPage() {
   return (
     <>
       <Navigation_bar />
-      <ContentSection>
+      <ContentSection style={{
+        
+      }}>
       <p style={{ fontFamily:"Bangers", fontSize:"40px", padding :"40px",textAlign:"center"}}>info</p>  
 
         <img src={IntroImg1} style={{width:"70%"}}/>

@@ -22,6 +22,10 @@ const NavigationContainer = styled.div`
   z-index: 1;
   height: 75px;
   border-bottom: 4px solid pink;
+  @media screen and (max-width :800px){
+    height: 60px;    
+}
+
 `
 const NavigationMenus = styled.ul`
   display :flex;
@@ -34,23 +38,31 @@ const NavigationMenu = styled.li`
   width: 90px;
   padding-left: 15px;
   color : #4c4c4c;
+  @media screen and (max-width :800px){
+    width: 20%;
+    padding-left:20px;
+}
 `
 
+const NavLogo = styled.h1`
+  @media screen and (max-width :800px){
+    display:none;
+}
+`
 export default function Navigation_bar() {
     return (
       
       <NavigationContainer>
-        <h1 class="logo">
+        <NavLogo class="logo" >
           <Link to = "/" >
-          <img src = {Logo} alt='logo' style={{height : "70px"}}/>
+          <img src = {Logo} alt='logo' style={{ height : "70px"}}/>
           </Link>
-        </h1>
+        </NavLogo>
         <NavigationMenus>
             <NavigationMenu><a href="/intro">Info</a></NavigationMenu>
             <NavigationMenu><Link to = "/survey">Service</Link></NavigationMenu>
             <NavigationMenu><a href="/about">About</a></NavigationMenu>
             <NavigationMenu><a href="/contact">Contact</a></NavigationMenu>
-            {/* <NavigationMenu><Link to = "/login">Login</Link></NavigationMenu> */}
         </NavigationMenus>
       </NavigationContainer>
     )

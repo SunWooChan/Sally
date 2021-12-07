@@ -5,8 +5,12 @@ import Navigation_bar from "../../common/Navigation";
 
 const AboutContainer = styled.div`
   padding-top: 50px;
-  /* border : 1px solid green; */
+  
   align-text : center;
+  @media screen and (max-width :800px){
+    padding-top: 40px;
+  }
+
 `;
 const CardContainer = styled.div`
   /* display: flex; */
@@ -17,9 +21,18 @@ const CardContainer = styled.div`
   h2 {
     margin: 0 0 15px 0;
   }
+  @media screen and (max-width :800px){
+    width: 80vw;
+  }
+  p{
+    @media screen and (max-width :800px){
+      padding: 5px ;
+    } 
+  }
 `;
 
 const PersonCard = styled.div`
+
   border-radius: 20px;
   box-shadow: 1px 1px 1px grey;
   padding: 10px;
@@ -106,8 +119,7 @@ export default function AboutPage() {
             <div>
               <h3>김창희</h3>
               <p style={{ fontWeight :"bold", color :"#2b77ab"}}>Co-Founder<br/>FrontEnd SW Engineer</p>
-              <p>"인생이 살맛나게 해주는 건 꿈이 현실이 되리라 믿는 것이다."</p>
-
+              <p>"日新又日新"</p>
             </div>
           </PersonCard>
         </CardContainer>

@@ -44,7 +44,6 @@ const StartBtn = styled.button`
   color : whitesmoke;
   font: 20px bold;
   border:none;
-  font-family : ;
 
   &:hover {
     background-color: green;
