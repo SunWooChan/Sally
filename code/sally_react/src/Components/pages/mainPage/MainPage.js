@@ -58,7 +58,7 @@ export default function MainPage() {
         <MainPageText>
           <div id="Sally">
             <h3></h3>
-            <p style={{fontSize:"100px"}}>Do Sally !</p><p>Salad for Only You</p>
+            <p style={{fontSize:"100px"}}>Do Sally !</p><p>Salad Only for You</p>
             <h3>
               3000 가지 종류의 샐러드에서 찾은 <br />
               당신만을 위한 샐러드!{" "}
